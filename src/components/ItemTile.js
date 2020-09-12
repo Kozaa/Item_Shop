@@ -9,13 +9,11 @@ const StyledTile = styled.div`
 
   grid-area: 1 / -1;
 
-  display: ${({ offset }) => (windowWidth < 300 * offset ? "none" : "block")};
-
   position: relative;
 
   border: 1px black solid;
-  background-image: ${({ photo }) => `url('/assets/clothes/${photo}.png')`};
-  background-size: contain;
+  background-image: ${({ photo }) => `url('assets/clothes/${photo}.png')`};
+  background-size: cover;
 
   transform-style: preserve-3d;
   transform: ${({ offset }) =>
@@ -39,8 +37,10 @@ const StyledTile = styled.div`
     top: 0;
     left: 0;
     background-color: black;
-    opacity: ${({ offset }) => (offset === 0 ? 0 : 0.7)};
+    opacity: ${({ offset }) =>
+      offset === 0 ? 0 : (Math.abs(offset) / 100) * 6};
     transition: opacity 0.5s ease-in-out;
+    will-change: opacity;
   }
 `;
 

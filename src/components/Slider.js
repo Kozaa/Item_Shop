@@ -26,50 +26,26 @@ const Button2 = styled(Button)`
 `;
 
 const initialState = {
-  slideIndex: 0,
+  slideIndex: 7,
 };
 
 const sliderReducer = (state, action) => {
   if (action.type === "NEXT") {
     return {
       ...state,
-      slideIndex: (state.slideIndex + 1) % manClothes.pants.length,
+      slideIndex: (state.slideIndex + 1) % saleItems.length,
     };
   }
   if (action.type === "PREV") {
     return {
       ...state,
       slideIndex:
-        state.slideIndex === 0
-          ? manClothes.pants.length - 1
-          : state.slideIndex - 1,
+        state.slideIndex === 0 ? saleItems.length - 1 : state.slideIndex - 1,
     };
   }
 };
 
-const testData = [
-  {
-    name: "slide 1",
-  },
-  {
-    name: "slide 2",
-  },
-  {
-    name: "slide 3",
-  },
-  {
-    name: "slide 4",
-  },
-  {
-    name: "slide 5",
-  },
-  {
-    name: "slide 6",
-  },
-  {
-    name: "slide 7",
-  },
-];
+const saleItems = manClothes.tshirts.slice(0, 15);
 
 const Slider = ({ theme }) => {
   const [slide, dispatch] = useReducer(sliderReducer, initialState);
@@ -77,9 +53,9 @@ const Slider = ({ theme }) => {
   return (
     <>
       <StyledItemsWrapper theme={theme}>
-        {manClothes.pants.map((item, i) => {
-          let offset = manClothes.pants.length - 1 - slide.slideIndex - i;
-          console.log(offset);
+        {saleItems.map((item, i) => {
+          let offset = saleItems.length - 1 - slide.slideIndex - i;
+
           return <ItemTile photo={item.photo} key={i} offset={offset} />;
         })}
       </StyledItemsWrapper>

@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import femaleHero from "../assets/female.jpg";
-import maleHero from "../assets/male.jpg";
 import Title from "../components/Title";
 
 const StyledHeroImage = styled.div`
@@ -10,8 +8,8 @@ const StyledHeroImage = styled.div`
   width: 100%;
   height: 100%;
 
-  background-image: url(${({ type }) =>
-    type === "male" ? maleHero : femaleHero});
+  background-image: ${({ type }) =>
+    type === "male" ? "url('/assets/male.jpg')" : "url('/assets/female.jpg')"};
   background-size: cover;
 
   :after {
