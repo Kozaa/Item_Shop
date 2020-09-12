@@ -1,4 +1,4 @@
-const manClothes = {
+export const manClothes = {
   tshirts: [
     {
       id: "mt1",
@@ -947,7 +947,7 @@ const manClothes = {
   ],
 };
 
-const womanClothes = {
+export const womanClothes = {
   tshirts: [
     {
       id: "wt1",
@@ -1745,19 +1745,3 @@ const womanClothes = {
     },
   ],
 };
-
-const all = [
-  ...manClothes.tshirts,
-  ...manClothes.pants,
-  ...manClothes.shoes,
-  ...womanClothes.tshirts,
-  ...womanClothes.shoes,
-  ...womanClothes.pants,
-];
-
-const shoesImages = all.map(
-  (item) =>
-    `<div class='row'><img src='clothes/${item.photo}.png' width='200px'/><p>${item.title}</p></div>`
-);
-
-root.innerHTML = shoesImages;
