@@ -984,7 +984,7 @@ export const womanClothes = {
       title: "green adidas t-shirt (wt4)",
       desc:
         "The best-fitting and flattering T-shirt. This basic tee especially has just the right weight to make it feel like a real shirt and not something sloppy. This one is not a workout tee per say, but you can't go wrong with one of those options, either.",
-      price: 142.6,
+      price: 142.65,
       brand: "adidas",
       color: "green",
       photo: "womanshirt4",

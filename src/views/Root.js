@@ -26,6 +26,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    body {
+      font-size: calc(1vw + 1vh + 9px);
+    }
+
     #root {
       flex-direction: column;
     }
