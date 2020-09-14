@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { menTheme, womenTheme } from "../theme";
 import styled, { ThemeProvider } from "styled-components";
-import Slider from "../components/Slider";
+import SliderDisplay from "../components/SliderDisplay";
 import Navigation from "../components/Navigation";
-{
-  /* <div>{props.location.pathname}</div> */
-}
+import MainClothesDisplay from "../components/MainClothesDisplay";
 
 const MainView = ({ location }) => {
   // true is men, false is women
@@ -15,13 +13,13 @@ const MainView = ({ location }) => {
 
   const handleGenderChange = () => {
     setGenderChoise(!genderChoise);
-    console.log(genderChoise);
   };
 
   return (
     <ThemeProvider theme={genderChoise ? menTheme : womenTheme}>
       <Navigation isMen={genderChoise} toggleGender={handleGenderChange} />
-      <Slider isMen={genderChoise} />
+      <SliderDisplay isMen={genderChoise} />
+      <MainClothesDisplay isMen={genderChoise} />
     </ThemeProvider>
   );
 };

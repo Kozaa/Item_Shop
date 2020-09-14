@@ -1,6 +1,7 @@
 import React, { useReducer } from "react";
 import styled from "styled-components";
-import ItemTile from "./ItemTile";
+import SliderTile from "./SliderTile";
+import Button from "./Button";
 import { manClothes, womanClothes } from "../data";
 
 const StyledItemsWrapper = styled.div`
@@ -8,23 +9,44 @@ const StyledItemsWrapper = styled.div`
   align-content: center;
   justify-content: center;
 
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   background-color: ${({ theme }) => theme.backgroundColor};
   overflow-x: hidden;
   z-index: 0;
 `;
 
-const Button = styled.button`
-  position: fixed;
-  padding: 20px;
-  z-index: 102;
-  top: 50%;
+const PrevButton = styled(Button)`
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  border-radius: 50%;
+  height: 20vh;
+  width: 20vh;
+  font-size: 1em;
+
+  @media screen and (max-width: 768px) {
+    width: 10vh;
+    height: 10vh;
+    bottom: auto;
+    top: 20vh;
+  }
 `;
 
-const Button2 = styled(Button)`
-  right: 0;
+const NextButton = styled(PrevButton)`
+  left: auto;
+  right: 10%;
+`;
+
+const SeeMoreButton = styled(Button)`
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 40px;
+  border-radius: 5px;
 `;
 
 const sliderReducer = (state, action) => {
@@ -52,7 +74,7 @@ const initialState = {
   slideIndex: 7,
 };
 
-const Slider = ({ isMen }) => {
+const SliderDisplay = ({ isMen }) => {
   const [slide, dispatch] = useReducer(sliderReducer, initialState);
   const saleItems = isMen
     ? manClothes.tshirts.slice(0, 15)
@@ -66,7 +88,7 @@ const Slider = ({ isMen }) => {
 
           let invertedI = arr.length - 1 - i;
           return (
-            <ItemTile
+            <SliderTile
               item={item}
               key={i}
               i={i}
@@ -78,10 +100,15 @@ const Slider = ({ isMen }) => {
           );
         })}
       </StyledItemsWrapper>
-      <Button onClick={() => dispatch({ type: "PREV" })}>prev</Button>
-      <Button2 onClick={() => dispatch({ type: "NEXT" })}>next</Button2>
+      <PrevButton handleClick={() => dispatch({ type: "PREV" })}>
+        prev
+      </PrevButton>
+      <NextButton handleClick={() => dispatch({ type: "NEXT" })}>
+        next
+      </NextButton>
+      <SeeMoreButton>See more</SeeMoreButton>
     </>
   );
 };
 
-export default Slider;
+export default SliderDisplay;

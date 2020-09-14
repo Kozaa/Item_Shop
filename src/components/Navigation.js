@@ -6,14 +6,15 @@ import Cart from "../components/Cart";
 
 const StyledNavigation = styled.header`
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  width: 100vw;
+  width: 100%;
   height: 10vh;
+  min-height: calc(2em + 10px);
   background-color: white;
   padding: 0 20px;
 `;

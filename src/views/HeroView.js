@@ -51,10 +51,10 @@ const StyledHeroImage = styled.div`
 
     background-position-x: center;
 
-    /* :after {
-      width: 100%;
-      height: 100%;
-    } */
+    :after {
+      width: 100vw;
+      height: 50vh;
+    }
   }
 `;
 

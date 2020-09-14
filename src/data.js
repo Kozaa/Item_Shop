@@ -45,7 +45,7 @@ export const manClothes = {
       title: "red nike t-shirt (mt5)",
       desc:
         "The best-fitting and flattering T-shirt. This basic tee especially has just the right weight to make it feel like a real shirt and not something sloppy. This one is not a workout tee per say, but you can't go wrong with one of those options, either.",
-      price: 133.5,
+      price: 133.52,
       brand: "nike",
       color: "red",
       photo: "manshirt5",
@@ -95,7 +95,7 @@ export const manClothes = {
       title: "green nike t-shirt (mt10)",
       desc:
         "The best-fitting and flattering T-shirt. This basic tee especially has just the right weight to make it feel like a real shirt and not something sloppy. This one is not a workout tee per say, but you can't go wrong with one of those options, either.",
-      price: 132.9,
+      price: 132.92,
       brand: "nike",
       color: "green",
       photo: "manshirt10",
@@ -105,7 +105,7 @@ export const manClothes = {
       title: "yellow nike t-shirt (mt11)",
       desc:
         "The best-fitting and flattering T-shirt. This basic tee especially has just the right weight to make it feel like a real shirt and not something sloppy. This one is not a workout tee per say, but you can't go wrong with one of those options, either.",
-      price: 239.3,
+      price: 239.33,
       brand: "nike",
       color: "yellow",
       photo: "manshirt11",
@@ -305,7 +305,7 @@ export const manClothes = {
       title: "blue rebook t-shirt (mt31)",
       desc:
         "The best-fitting and flattering T-shirt. This basic tee especially has just the right weight to make it feel like a real shirt and not something sloppy. This one is not a workout tee per say, but you can't go wrong with one of those options, either.",
-      price: 101,
+      price: 101.0,
       brand: "rebook",
       color: "blue",
       photo: "manshirt31",
@@ -547,7 +547,7 @@ export const manClothes = {
       title: "red adidas pants (mp7)",
       desc:
         "Featuring a flattering, slim fit, these trousers have just the right amount of stretch in the fabric to avoid feeling like a stuffed sausage. Available in several colorways, you can stock your whole closet with this perfect pant for spring.",
-      price: 47.7,
+      price: 47.72,
       brand: "adidas",
       color: "red",
       photo: "manpants7",
@@ -587,7 +587,7 @@ export const manClothes = {
       title: "green adidas pants (mp11)",
       desc:
         "Featuring a flattering, slim fit, these trousers have just the right amount of stretch in the fabric to avoid feeling like a stuffed sausage. Available in several colorways, you can stock your whole closet with this perfect pant for spring.",
-      price: 97.1,
+      price: 97.31,
       brand: "adidas",
       color: "green",
       photo: "manpants11",
@@ -617,7 +617,7 @@ export const manClothes = {
       title: "green nike pants (mp14)",
       desc:
         "Featuring a flattering, slim fit, these trousers have just the right amount of stretch in the fabric to avoid feeling like a stuffed sausage. Available in several colorways, you can stock your whole closet with this perfect pant for spring.",
-      price: 52.8,
+      price: 52.28,
       brand: "nike",
       color: "green",
       photo: "manpants14",
@@ -737,7 +737,7 @@ export const manClothes = {
       title: "green puma pants (mp26)",
       desc:
         "Featuring a flattering, slim fit, these trousers have just the right amount of stretch in the fabric to avoid feeling like a stuffed sausage. Available in several colorways, you can stock your whole closet with this perfect pant for spring.",
-      price: 69.1,
+      price: 69.51,
       brand: "puma",
       color: "green",
       photo: "manpants26",
@@ -1174,7 +1174,7 @@ export const womanClothes = {
       title: "red nike t-shirt (wt23)",
       desc:
         "The best-fitting and flattering T-shirt. This basic tee especially has just the right weight to make it feel like a real shirt and not something sloppy. This one is not a workout tee per say, but you can't go wrong with one of those options, either.",
-      price: 272,
+      price: 272.0,
       brand: "nike",
       color: "red",
       photo: "womanshirt23",
@@ -1234,7 +1234,7 @@ export const womanClothes = {
       title: "yellow puma t-shirt (wt29)",
       desc:
         "The best-fitting and flattering T-shirt. This basic tee especially has just the right weight to make it feel like a real shirt and not something sloppy. This one is not a workout tee per say, but you can't go wrong with one of those options, either.",
-      price: 166.7,
+      price: 166.72,
       brand: "puma",
       color: "yellow",
       photo: "womanshirt29",
@@ -1326,7 +1326,7 @@ export const womanClothes = {
       title: "red reebok pants (wp7)",
       desc:
         "Featuring a flattering, slim fit, these trousers have just the right amount of stretch in the fabric to avoid feeling like a stuffed sausage. Available in several colorways, you can stock your whole closet with this perfect pant for spring.",
-      price: 217.8,
+      price: 217.81,
       brand: "reebok",
       color: "red",
       photo: "womanpants7",
@@ -1336,7 +1336,7 @@ export const womanClothes = {
       title: "red reebok pants (wp8)",
       desc:
         "Featuring a flattering, slim fit, these trousers have just the right amount of stretch in the fabric to avoid feeling like a stuffed sausage. Available in several colorways, you can stock your whole closet with this perfect pant for spring.",
-      price: 115.2,
+      price: 115.26,
       brand: "reebok",
       color: "red",
       photo: "womanpants8",
@@ -1356,7 +1356,7 @@ export const womanClothes = {
       title: "blue reebok pants (wp10)",
       desc:
         "Featuring a flattering, slim fit, these trousers have just the right amount of stretch in the fabric to avoid feeling like a stuffed sausage. Available in several colorways, you can stock your whole closet with this perfect pant for spring.",
-      price: 145.7,
+      price: 145.73,
       brand: "reebok",
       color: "blue",
       photo: "womanpants10",
@@ -1366,7 +1366,7 @@ export const womanClothes = {
       title: "green puma pants (wp11)",
       desc:
         "Featuring a flattering, slim fit, these trousers have just the right amount of stretch in the fabric to avoid feeling like a stuffed sausage. Available in several colorways, you can stock your whole closet with this perfect pant for spring.",
-      price: 54.9,
+      price: 54.94,
       brand: "puma",
       color: "green",
       photo: "womanpants11",
@@ -1376,7 +1376,7 @@ export const womanClothes = {
       title: "blue puma pants (wp12)",
       desc:
         "Featuring a flattering, slim fit, these trousers have just the right amount of stretch in the fabric to avoid feeling like a stuffed sausage. Available in several colorways, you can stock your whole closet with this perfect pant for spring.",
-      price: 88.6,
+      price: 88.61,
       brand: "puma",
       color: "blue",
       photo: "womanpants12",
@@ -1456,7 +1456,7 @@ export const womanClothes = {
       title: "yellow nike pants (wp20)",
       desc:
         "Featuring a flattering, slim fit, these trousers have just the right amount of stretch in the fabric to avoid feeling like a stuffed sausage. Available in several colorways, you can stock your whole closet with this perfect pant for spring.",
-      price: 296.6,
+      price: 296.63,
       brand: "nike",
       color: "yellow",
       photo: "womanpants20",
@@ -1498,7 +1498,7 @@ export const womanClothes = {
       title: "blue adidas shoes (ws3)",
       desc:
         "The original sneakers come in a minimalist, leather silhouette resting on a rubber sole and are finished with the brand's signature coding on the outer sides.",
-      price: 48.7,
+      price: 48.73,
       brand: "adidas",
       color: "blue",
       photo: "womanshoes3",
@@ -1568,7 +1568,7 @@ export const womanClothes = {
       title: "yellow reebok shoes (ws10)",
       desc:
         "The original sneakers come in a minimalist, leather silhouette resting on a rubber sole and are finished with the brand's signature coding on the outer sides.",
-      price: 219.5,
+      price: 219.55,
       brand: "reebok",
       color: "yellow",
       photo: "womanshoes10",
@@ -1658,7 +1658,7 @@ export const womanClothes = {
       title: "green puma shoes (ws19)",
       desc:
         "The original sneakers come in a minimalist, leather silhouette resting on a rubber sole and are finished with the brand's signature coding on the outer sides.",
-      price: 282.9,
+      price: 282.39,
       brand: "puma",
       color: "green",
       photo: "womanshoes19",
@@ -1718,7 +1718,7 @@ export const womanClothes = {
       title: "red puma shoes (ws25)",
       desc:
         "The original sneakers come in a minimalist, leather silhouette resting on a rubber sole and are finished with the brand's signature coding on the outer sides.",
-      price: 187,
+      price: 187.0,
       brand: "puma",
       color: "red",
       photo: "womanshoes25",

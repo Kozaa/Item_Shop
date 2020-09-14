@@ -18,11 +18,13 @@ body {
 
 }
 
+
+
 #root {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -32,6 +34,7 @@ body {
 
     #root {
       flex-direction: column;
+  
     }
   }
 
