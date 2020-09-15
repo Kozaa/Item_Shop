@@ -16,7 +16,7 @@ const StyledHeroImage = styled.div`
     content: "";
     display: block;
     height: 100vh;
-    width: 50vw;
+    width: 100%;
 
     background-color: black;
     opacity: 0.7;
@@ -52,9 +52,19 @@ const StyledHeroImage = styled.div`
     background-position-x: center;
 
     :after {
-      width: 100vw;
+      width: 100%;
       height: 50vh;
     }
+  }
+`;
+
+const StyledLink = styled(Link)`
+  width: 50%;
+  height: 100vh;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: 50%;
   }
 `;
 
@@ -62,12 +72,12 @@ const HeroView = () => {
   return (
     <>
       <Title>ItemShop</Title>
-      <Link to="men">
+      <StyledLink to="men">
         <StyledHeroImage type="male"></StyledHeroImage>
-      </Link>
-      <Link to="/women">
+      </StyledLink>
+      <StyledLink to="/women">
         <StyledHeroImage type="female"></StyledHeroImage>
-      </Link>
+      </StyledLink>
     </>
   );
 };

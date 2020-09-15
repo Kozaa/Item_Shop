@@ -26,6 +26,7 @@ const PrevButton = styled(Button)`
   height: 20vh;
   width: 20vh;
   font-size: 1em;
+  outline: none;
 
   @media screen and (max-width: 768px) {
     width: 10vh;

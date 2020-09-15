@@ -15,16 +15,14 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   font-size: calc(1vw + 1vh + 2px);
-
 }
 
 
 
 #root {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
-  height: auto;
 }
 
 @media screen and (max-width: 768px) {
