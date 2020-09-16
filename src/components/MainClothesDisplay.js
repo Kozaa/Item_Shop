@@ -21,7 +21,6 @@ const StyledApology = styled.div`
   bottom: 0;
   left: 50%;
   transform: translateX(-50%) translateY(100%);
-  background: none;
   height: 50vh;
   width: 100%;
   text-align: center;
@@ -32,6 +31,7 @@ const MainClothesDisplay = ({ getParameters, clothesData }) => (
   <>
     <SortBar getParameters={getParameters}></SortBar>
     <DisplayWrapper>
+      {console.log("clothesData from display", clothesData)}
       {clothesData.length !== 0 ? (
         clothesData.map((item, i) => <ItemTile key={i} {...item} />)
       ) : (

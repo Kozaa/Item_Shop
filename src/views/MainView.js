@@ -34,7 +34,11 @@ const MainView = ({ location }) => {
 
   useEffect(() => {
     sortByParameters();
-  }, [sortParameters]);
+  }, [sortParameters, genderChoise]);
+
+  const handleGenderChange = () => {
+    setGenderChoise(!genderChoise);
+  };
 
   const getParameters = (event) => {
     event.persist();
@@ -46,10 +50,17 @@ const MainView = ({ location }) => {
   };
 
   const sortByParameters = () => {
+    console.log("initial clothes data: ", clothesData);
+    console.log("initial sortParameters: ", sortParameters);
+
+    const unsorted = genderChoise ? manClothes : womanClothes;
+
     const sortedByType =
       !sortParameters.Item || sortParameters.Item === "All"
-        ? [...manClothes.tshirts, ...manClothes.pants, ...manClothes.shoes]
-        : manClothes[sortParameters.Item.toLowerCase()];
+        ? [...unsorted.tshirts, ...unsorted.pants, ...unsorted.shoes]
+        : unsorted[sortParameters.Item.toLowerCase()];
+
+    console.log("sorted by type: ", sortedByType);
 
     const sortedByBrand = sortedByType.filter((item) => {
       return !sortParameters.Brand || sortParameters.Brand === "All"
@@ -74,10 +85,6 @@ const MainView = ({ location }) => {
     });
 
     setClothesData(sortedByPrice);
-  };
-
-  const handleGenderChange = () => {
-    setGenderChoise(!genderChoise);
   };
 
   return (
