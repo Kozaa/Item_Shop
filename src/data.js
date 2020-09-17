@@ -9,6 +9,7 @@ export const manClothes = {
       brand: "nike",
       color: "blue",
       photo: "manshirt1",
+      onSale: false,
     },
     {
       id: "mt2",
@@ -19,6 +20,7 @@ export const manClothes = {
       brand: "nike",
       color: "blue",
       photo: "manshirt2",
+      onSale: false,
     },
     {
       id: "mt3",
@@ -29,6 +31,7 @@ export const manClothes = {
       brand: "nike",
       color: "blue",
       photo: "manshirt3",
+      onSale: false,
     },
     {
       id: "mt4",
@@ -39,6 +42,7 @@ export const manClothes = {
       brand: "nike",
       color: "red",
       photo: "manshirt4",
+      onSale: false,
     },
     {
       id: "mt5",
@@ -49,6 +53,7 @@ export const manClothes = {
       brand: "nike",
       color: "red",
       photo: "manshirt5",
+      onSale: false,
     },
     {
       id: "mt6",
@@ -59,6 +64,7 @@ export const manClothes = {
       brand: "nike",
       color: "yellow",
       photo: "manshirt6",
+      onSale: false,
     },
     {
       id: "mt7",
@@ -69,6 +75,7 @@ export const manClothes = {
       brand: "nike",
       color: "green",
       photo: "manshirt7",
+      onSale: false,
     },
     {
       id: "mt8",
@@ -79,6 +86,7 @@ export const manClothes = {
       brand: "nike",
       color: "red",
       photo: "manshirt8",
+      onSale: false,
     },
     {
       id: "mt9",
@@ -89,6 +97,7 @@ export const manClothes = {
       brand: "nike",
       color: "green",
       photo: "manshirt9",
+      onSale: false,
     },
     {
       id: "mt10",
@@ -99,6 +108,7 @@ export const manClothes = {
       brand: "nike",
       color: "green",
       photo: "manshirt10",
+      onSale: false,
     },
     {
       id: "mt11",
@@ -109,6 +119,7 @@ export const manClothes = {
       brand: "nike",
       color: "yellow",
       photo: "manshirt11",
+      onSale: false,
     },
     {
       id: "mt12",
@@ -119,6 +130,7 @@ export const manClothes = {
       brand: "nike",
       color: "yellow",
       photo: "manshirt12",
+      onSale: true,
     },
     {
       id: "mt13",
@@ -129,6 +141,7 @@ export const manClothes = {
       brand: "adidas",
       color: "yellow",
       photo: "manshirt13",
+      onSale: false,
     },
     {
       id: "mt14",
@@ -139,6 +152,7 @@ export const manClothes = {
       brand: "adidas",
       color: "yellow",
       photo: "manshirt14",
+      onSale: false,
     },
     {
       id: "mt15",
@@ -149,6 +163,7 @@ export const manClothes = {
       brand: "adidas",
       color: "yellow",
       photo: "manshirt15",
+      onSale: false,
     },
     {
       id: "mt16",
@@ -159,6 +174,7 @@ export const manClothes = {
       brand: "adidas",
       color: "red",
       photo: "manshirt16",
+      onSale: false,
     },
     {
       id: "mt17",
@@ -169,6 +185,7 @@ export const manClothes = {
       brand: "adidas",
       color: "red",
       photo: "manshirt17",
+      onSale: false,
     },
     {
       id: "mt18",
@@ -179,6 +196,7 @@ export const manClothes = {
       brand: "adidas",
       color: "red",
       photo: "manshirt18",
+      onSale: false,
     },
     {
       id: "mt19",
@@ -189,6 +207,7 @@ export const manClothes = {
       brand: "adidas",
       color: "blue",
       photo: "manshirt19",
+      onSale: true,
     },
     {
       id: "mt20",
@@ -199,6 +218,7 @@ export const manClothes = {
       brand: "adidas",
       color: "blue",
       photo: "manshirt20",
+      onSale: false,
     },
     {
       id: "mt21",
@@ -209,6 +229,7 @@ export const manClothes = {
       brand: "adidas",
       color: "blue",
       photo: "manshirt21",
+      onSale: false,
     },
     {
       id: "mt22",
@@ -219,6 +240,7 @@ export const manClothes = {
       brand: "adidas",
       color: "green",
       photo: "manshirt22",
+      onSale: false,
     },
     {
       id: "mt23",
@@ -229,6 +251,7 @@ export const manClothes = {
       brand: "adidas",
       color: "green",
       photo: "manshirt23",
+      onSale: false,
     },
     {
       id: "mt24",
@@ -239,6 +262,7 @@ export const manClothes = {
       brand: "adidas",
       color: "green",
       photo: "manshirt24",
+      onSale: false,
     },
     {
       id: "mt25",
@@ -249,6 +273,7 @@ export const manClothes = {
       brand: "reebok",
       color: "green",
       photo: "manshirt25",
+      onSale: false,
     },
     {
       id: "mt26",
@@ -259,6 +284,7 @@ export const manClothes = {
       brand: "reebok",
       color: "green",
       photo: "manshirt26",
+      onSale: false,
     },
     {
       id: "mt27",
@@ -269,6 +295,7 @@ export const manClothes = {
       brand: "reebok",
       color: "green",
       photo: "manshirt27",
+      onSale: true,
     },
     {
       id: "mt28",
@@ -279,6 +306,7 @@ export const manClothes = {
       brand: "reebok",
       color: "red",
       photo: "manshirt28",
+      onSale: false,
     },
     {
       id: "mt29",
@@ -289,6 +317,7 @@ export const manClothes = {
       brand: "reebok",
       color: "red",
       photo: "manshirt29",
+      onSale: false,
     },
     {
       id: "mt30",
@@ -299,6 +328,7 @@ export const manClothes = {
       brand: "reebok",
       color: "red",
       photo: "manshirt30",
+      onSale: false,
     },
     {
       id: "mt31",
@@ -309,6 +339,7 @@ export const manClothes = {
       brand: "reebok",
       color: "blue",
       photo: "manshirt31",
+      onSale: false,
     },
     {
       id: "mt32",
@@ -319,6 +350,7 @@ export const manClothes = {
       brand: "reebok",
       color: "blue",
       photo: "manshirt32",
+      onSale: false,
     },
     {
       id: "mt33",
@@ -329,6 +361,7 @@ export const manClothes = {
       brand: "reebok",
       color: "blue",
       photo: "manshirt33",
+      onSale: false,
     },
     {
       id: "mt34",
@@ -339,6 +372,7 @@ export const manClothes = {
       brand: "reebok",
       color: "yellow",
       photo: "manshirt34",
+      onSale: false,
     },
     {
       id: "mt35",
@@ -349,6 +383,7 @@ export const manClothes = {
       brand: "reebok",
       color: "yellow",
       photo: "manshirt35",
+      onSale: false,
     },
     {
       id: "mt36",
@@ -359,6 +394,7 @@ export const manClothes = {
       brand: "reebok",
       color: "yellow",
       photo: "manshirt36",
+      onSale: false,
     },
     {
       id: "mt37",
@@ -369,6 +405,7 @@ export const manClothes = {
       brand: "puma",
       color: "yellow",
       photo: "manshirt37",
+      onSale: false,
     },
     {
       id: "mt38",
@@ -379,6 +416,7 @@ export const manClothes = {
       brand: "puma",
       color: "yellow",
       photo: "manshirt38",
+      onSale: false,
     },
     {
       id: "mt39",
@@ -389,6 +427,7 @@ export const manClothes = {
       brand: "puma",
       color: "yellow",
       photo: "manshirt39",
+      onSale: false,
     },
     {
       id: "mt40",
@@ -399,6 +438,7 @@ export const manClothes = {
       brand: "puma",
       color: "green",
       photo: "manshirt40",
+      onSale: false,
     },
     {
       id: "mt41",
@@ -409,6 +449,7 @@ export const manClothes = {
       brand: "puma",
       color: "green",
       photo: "manshirt41",
+      onSale: false,
     },
     {
       id: "mt42",
@@ -419,6 +460,7 @@ export const manClothes = {
       brand: "puma",
       color: "red",
       photo: "manshirt42",
+      onSale: false,
     },
     {
       id: "mt43",
@@ -429,6 +471,7 @@ export const manClothes = {
       brand: "puma",
       color: "green",
       photo: "manshirt43",
+      onSale: false,
     },
     {
       id: "mt44",
@@ -439,6 +482,7 @@ export const manClothes = {
       brand: "puma",
       color: "blue",
       photo: "manshirt44",
+      onSale: false,
     },
     {
       id: "mt45",
@@ -449,6 +493,7 @@ export const manClothes = {
       brand: "puma",
       color: "blue",
       photo: "manshirt45",
+      onSale: false,
     },
     {
       id: "mt46",
@@ -459,6 +504,7 @@ export const manClothes = {
       brand: "puma",
       color: "blue",
       photo: "manshirt46",
+      onSale: false,
     },
     {
       id: "mt47",
@@ -469,6 +515,7 @@ export const manClothes = {
       brand: "puma",
       color: "red",
       photo: "manshirt47",
+      onSale: false,
     },
     {
       id: "mt48",
@@ -479,6 +526,7 @@ export const manClothes = {
       brand: "puma",
       color: "red",
       photo: "manshirt48",
+      onSale: false,
     },
   ],
   pants: [
@@ -491,6 +539,7 @@ export const manClothes = {
       brand: "adidas",
       color: "yellow",
       photo: "manpants1",
+      onSale: false,
     },
     {
       id: "mp2",
@@ -501,6 +550,7 @@ export const manClothes = {
       brand: "adidas",
       color: "yellow",
       photo: "manpants2",
+      onSale: true,
     },
     {
       id: "mp3",
@@ -511,6 +561,7 @@ export const manClothes = {
       brand: "adidas",
       color: "yellow",
       photo: "manpants3",
+      onSale: false,
     },
     {
       id: "mp4",
@@ -521,6 +572,7 @@ export const manClothes = {
       brand: "adidas",
       color: "blue",
       photo: "manpants4",
+      onSale: false,
     },
     {
       id: "mp5",
@@ -531,6 +583,7 @@ export const manClothes = {
       brand: "adidas",
       color: "blue",
       photo: "manpants5",
+      onSale: false,
     },
     {
       id: "mp6",
@@ -541,6 +594,7 @@ export const manClothes = {
       brand: "adidas",
       color: "blue",
       photo: "manpants6",
+      onSale: false,
     },
     {
       id: "mp7",
@@ -551,6 +605,7 @@ export const manClothes = {
       brand: "adidas",
       color: "red",
       photo: "manpants7",
+      onSale: true,
     },
     {
       id: "mp8",
@@ -561,6 +616,7 @@ export const manClothes = {
       brand: "adidas",
       color: "red",
       photo: "manpants8",
+      onSale: false,
     },
     {
       id: "mp9",
@@ -571,6 +627,7 @@ export const manClothes = {
       brand: "adidas",
       color: "red",
       photo: "manpants9",
+      onSale: true,
     },
     {
       id: "mp10",
@@ -581,6 +638,7 @@ export const manClothes = {
       brand: "adidas",
       color: "green",
       photo: "manpants10",
+      onSale: false,
     },
     {
       id: "mp11",
@@ -591,6 +649,7 @@ export const manClothes = {
       brand: "adidas",
       color: "green",
       photo: "manpants11",
+      onSale: true,
     },
     {
       id: "mp12",
@@ -601,6 +660,7 @@ export const manClothes = {
       brand: "adidas",
       color: "green",
       photo: "manpants12",
+      onSale: false,
     },
     {
       id: "mp13",
@@ -611,6 +671,7 @@ export const manClothes = {
       brand: "nike",
       color: "green",
       photo: "manpants13",
+      onSale: false,
     },
     {
       id: "mp14",
@@ -621,6 +682,7 @@ export const manClothes = {
       brand: "nike",
       color: "green",
       photo: "manpants14",
+      onSale: false,
     },
     {
       id: "mp15",
@@ -631,6 +693,7 @@ export const manClothes = {
       brand: "nike",
       color: "green",
       photo: "manpants15",
+      onSale: false,
     },
     {
       id: "mp16",
@@ -641,6 +704,7 @@ export const manClothes = {
       brand: "nike",
       color: "yellow",
       photo: "manpants16",
+      onSale: false,
     },
     {
       id: "mp17",
@@ -651,6 +715,7 @@ export const manClothes = {
       brand: "nike",
       color: "yellow",
       photo: "manpants17",
+      onSale: false,
     },
     {
       id: "mp18",
@@ -661,6 +726,7 @@ export const manClothes = {
       brand: "nike",
       color: "yellow",
       photo: "manpants18",
+      onSale: false,
     },
     {
       id: "mp19",
@@ -671,6 +737,7 @@ export const manClothes = {
       brand: "nike",
       color: "red",
       photo: "manpants19",
+      onSale: false,
     },
     {
       id: "mp20",
@@ -681,6 +748,7 @@ export const manClothes = {
       brand: "reebok",
       color: "red",
       photo: "manpants20",
+      onSale: true,
     },
     {
       id: "mp21",
@@ -691,6 +759,7 @@ export const manClothes = {
       brand: "reebok",
       color: "blue",
       photo: "manpants21",
+      onSale: false,
     },
     {
       id: "mp22",
@@ -701,6 +770,7 @@ export const manClothes = {
       brand: "reebok",
       color: "blue",
       photo: "manpants22",
+      onSale: true,
     },
     {
       id: "mp23",
@@ -711,6 +781,7 @@ export const manClothes = {
       brand: "reebok",
       color: "yellow",
       photo: "manpants23",
+      onSale: false,
     },
     {
       id: "mp24",
@@ -721,6 +792,7 @@ export const manClothes = {
       brand: "reebok",
       color: "blue",
       photo: "manpants24",
+      onSale: false,
     },
     {
       id: "mp25",
@@ -731,6 +803,7 @@ export const manClothes = {
       brand: "reebok",
       color: "red",
       photo: "manpants25",
+      onSale: true,
     },
     {
       id: "mp26",
@@ -741,6 +814,7 @@ export const manClothes = {
       brand: "puma",
       color: "green",
       photo: "manpants26",
+      onSale: false,
     },
     {
       id: "mp27",
@@ -751,6 +825,7 @@ export const manClothes = {
       brand: "puma",
       color: "blue",
       photo: "manpants27",
+      onSale: false,
     },
     {
       id: "mp28",
@@ -761,6 +836,7 @@ export const manClothes = {
       brand: "puma",
       color: "green",
       photo: "manpants28",
+      onSale: false,
     },
   ],
   shoes: [
@@ -773,6 +849,7 @@ export const manClothes = {
       brand: "nike",
       color: "blue",
       photo: "manshoes1",
+      onSale: false,
     },
     {
       id: "ms2",
@@ -783,6 +860,7 @@ export const manClothes = {
       brand: "nike",
       color: "blue",
       photo: "manshoes2",
+      onSale: true,
     },
     {
       id: "ms3",
@@ -793,6 +871,7 @@ export const manClothes = {
       brand: "nike",
       color: "blue",
       photo: "manshoes3",
+      onSale: false,
     },
     {
       id: "ms4",
@@ -803,6 +882,7 @@ export const manClothes = {
       brand: "nike",
       color: "yellow",
       photo: "manshoes4",
+      onSale: false,
     },
     {
       id: "ms5",
@@ -813,6 +893,7 @@ export const manClothes = {
       brand: "nike",
       color: "red",
       photo: "manshoes5",
+      onSale: false,
     },
     {
       id: "ms6",
@@ -823,6 +904,7 @@ export const manClothes = {
       brand: "nike",
       color: "red",
       photo: "manshoes6",
+      onSale: false,
     },
     {
       id: "ms7",
@@ -833,6 +915,7 @@ export const manClothes = {
       brand: "nike",
       color: "green",
       photo: "manshoes7",
+      onSale: true,
     },
     {
       id: "ms8",
@@ -843,6 +926,7 @@ export const manClothes = {
       brand: "reebok",
       color: "blue",
       photo: "manshoes8",
+      onSale: false,
     },
     {
       id: "ms9",
@@ -853,6 +937,7 @@ export const manClothes = {
       brand: "reebok",
       color: "yellow",
       photo: "manshoes9",
+      onSale: false,
     },
     {
       id: "ms10",
@@ -863,6 +948,7 @@ export const manClothes = {
       brand: "reebok",
       color: "blue",
       photo: "manshoes10",
+      onSale: false,
     },
     {
       id: "ms11",
@@ -873,6 +959,7 @@ export const manClothes = {
       brand: "reebok",
       color: "red",
       photo: "manshoes11",
+      onSale: false,
     },
     {
       id: "ms12",
@@ -883,6 +970,7 @@ export const manClothes = {
       brand: "reebok",
       color: "red",
       photo: "manshoes12",
+      onSale: true,
     },
     {
       id: "ms13",
@@ -893,6 +981,7 @@ export const manClothes = {
       brand: "adidas",
       color: "red",
       photo: "manshoes13",
+      onSale: false,
     },
     {
       id: "ms14",
@@ -903,6 +992,7 @@ export const manClothes = {
       brand: "adidas",
       color: "yellow",
       photo: "manshoes14",
+      onSale: false,
     },
     {
       id: "ms15",
@@ -913,6 +1003,7 @@ export const manClothes = {
       brand: "adidas",
       color: "green",
       photo: "manshoes15",
+      onSale: true,
     },
     {
       id: "ms16",
@@ -923,6 +1014,7 @@ export const manClothes = {
       brand: "adidas",
       color: "blue",
       photo: "manshoes16",
+      onSale: true,
     },
     {
       id: "ms17",
@@ -933,6 +1025,7 @@ export const manClothes = {
       brand: "adidas",
       color: "blue",
       photo: "manshoes17",
+      onSale: false,
     },
     {
       id: "ms18",
@@ -943,6 +1036,7 @@ export const manClothes = {
       brand: "adidas",
       color: "yellow",
       photo: "manshoes18",
+      onSale: false,
     },
   ],
 };
@@ -958,6 +1052,7 @@ export const womanClothes = {
       brand: "adidas",
       color: "green",
       photo: "womanshirt1",
+      onSale: false,
     },
     {
       id: "wt2",
@@ -968,6 +1063,7 @@ export const womanClothes = {
       brand: "adidas",
       color: "blue",
       photo: "womanshirt2",
+      onSale: false,
     },
     {
       id: "wt3",
@@ -978,6 +1074,7 @@ export const womanClothes = {
       brand: "adidas",
       color: "blue",
       photo: "womanshirt3",
+      onSale: false,
     },
     {
       id: "wt4",
@@ -988,6 +1085,7 @@ export const womanClothes = {
       brand: "adidas",
       color: "green",
       photo: "womanshirt4",
+      onSale: false,
     },
     {
       id: "wt5",
@@ -998,6 +1096,7 @@ export const womanClothes = {
       brand: "adidas",
       color: "green",
       photo: "womanshirt5",
+      onSale: false,
     },
     {
       id: "wt6",
@@ -1008,6 +1107,7 @@ export const womanClothes = {
       brand: "adidas",
       color: "green",
       photo: "womanshirt6",
+      onSale: true,
     },
     {
       id: "wt7",
@@ -1018,6 +1118,7 @@ export const womanClothes = {
       brand: "adidas",
       color: "green",
       photo: "womanshirt7",
+      onSale: false,
     },
     {
       id: "wt8",
@@ -1028,6 +1129,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "green",
       photo: "womanshirt8",
+      onSale: false,
     },
     {
       id: "wt9",
@@ -1038,6 +1140,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "blue",
       photo: "womanshirt9",
+      onSale: true,
     },
     {
       id: "wt10",
@@ -1048,6 +1151,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "blue",
       photo: "womanshirt10",
+      onSale: false,
     },
     {
       id: "wt11",
@@ -1058,6 +1162,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "yellow",
       photo: "womanshirt11",
+      onSale: false,
     },
     {
       id: "wt12",
@@ -1068,6 +1173,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "yellow",
       photo: "womanshirt12",
+      onSale: true,
     },
     {
       id: "wt13",
@@ -1078,6 +1184,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "red",
       photo: "womanshirt13",
+      onSale: true,
     },
     {
       id: "wt14",
@@ -1088,6 +1195,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "blue",
       photo: "womanshirt14",
+      onSale: false,
     },
     {
       id: "wt15",
@@ -1098,6 +1206,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "red",
       photo: "womanshirt15",
+      onSale: false,
     },
     {
       id: "wt16",
@@ -1108,6 +1217,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "green",
       photo: "womanshirt16",
+      onSale: false,
     },
     {
       id: "wt17",
@@ -1118,6 +1228,7 @@ export const womanClothes = {
       brand: "nike",
       color: "green",
       photo: "womanshirt17",
+      onSale: false,
     },
     {
       id: "wt18",
@@ -1128,6 +1239,7 @@ export const womanClothes = {
       brand: "nike",
       color: "blue",
       photo: "womanshirt18",
+      onSale: false,
     },
     {
       id: "wt19",
@@ -1138,6 +1250,7 @@ export const womanClothes = {
       brand: "nike",
       color: "blue",
       photo: "womanshirt19",
+      onSale: false,
     },
     {
       id: "wt20",
@@ -1148,6 +1261,7 @@ export const womanClothes = {
       brand: "nike",
       color: "green",
       photo: "womanshirt20",
+      onSale: true,
     },
     {
       id: "wt21",
@@ -1158,6 +1272,7 @@ export const womanClothes = {
       brand: "nike",
       color: "green",
       photo: "womanshirt21",
+      onSale: false,
     },
     {
       id: "wt22",
@@ -1168,6 +1283,7 @@ export const womanClothes = {
       brand: "nike",
       color: "yellow",
       photo: "womanshirt22",
+      onSale: false,
     },
     {
       id: "wt23",
@@ -1178,6 +1294,7 @@ export const womanClothes = {
       brand: "nike",
       color: "red",
       photo: "womanshirt23",
+      onSale: false,
     },
     {
       id: "wt24",
@@ -1188,6 +1305,7 @@ export const womanClothes = {
       brand: "nike",
       color: "red",
       photo: "womanshirt24",
+      onSale: false,
     },
     {
       id: "wt25",
@@ -1198,6 +1316,7 @@ export const womanClothes = {
       brand: "nike",
       color: "yellow",
       photo: "womanshirt25",
+      onSale: false,
     },
     {
       id: "wt26",
@@ -1208,6 +1327,7 @@ export const womanClothes = {
       brand: "puma",
       color: "yellow",
       photo: "womanshirt26",
+      onSale: false,
     },
     {
       id: "wt27",
@@ -1218,6 +1338,7 @@ export const womanClothes = {
       brand: "puma",
       color: "blue",
       photo: "womanshirt27",
+      onSale: false,
     },
     {
       id: "wt28",
@@ -1228,6 +1349,7 @@ export const womanClothes = {
       brand: "puma",
       color: "blue",
       photo: "womanshirt28",
+      onSale: false,
     },
     {
       id: "wt29",
@@ -1238,6 +1360,7 @@ export const womanClothes = {
       brand: "puma",
       color: "yellow",
       photo: "womanshirt29",
+      onSale: false,
     },
     {
       id: "wt30",
@@ -1248,6 +1371,7 @@ export const womanClothes = {
       brand: "puma",
       color: "blue",
       photo: "womanshirt30",
+      onSale: true,
     },
     {
       id: "wt31",
@@ -1258,6 +1382,7 @@ export const womanClothes = {
       brand: "puma",
       color: "red",
       photo: "womanshirt31",
+      onSale: false,
     },
   ],
   pants: [
@@ -1270,6 +1395,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "red",
       photo: "womanpants1",
+      onSale: true,
     },
     {
       id: "wp2",
@@ -1280,6 +1406,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "red",
       photo: "womanpants2",
+      onSale: true,
     },
     {
       id: "wp3",
@@ -1290,6 +1417,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "green",
       photo: "womanpants3",
+      onSale: false,
     },
     {
       id: "wp4",
@@ -1300,6 +1428,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "blue",
       photo: "womanpants4",
+      onSale: false,
     },
     {
       id: "wp5",
@@ -1310,6 +1439,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "green",
       photo: "womanpants5",
+      onSale: false,
     },
     {
       id: "wp6",
@@ -1320,6 +1450,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "blue",
       photo: "womanpants6",
+      onSale: true,
     },
     {
       id: "wp7",
@@ -1330,6 +1461,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "red",
       photo: "womanpants7",
+      onSale: false,
     },
     {
       id: "wp8",
@@ -1340,6 +1472,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "red",
       photo: "womanpants8",
+      onSale: true,
     },
     {
       id: "wp9",
@@ -1350,6 +1483,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "yellow",
       photo: "womanpants9",
+      onSale: false,
     },
     {
       id: "wp10",
@@ -1360,6 +1494,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "blue",
       photo: "womanpants10",
+      onSale: false,
     },
     {
       id: "wp11",
@@ -1370,6 +1505,7 @@ export const womanClothes = {
       brand: "puma",
       color: "green",
       photo: "womanpants11",
+      onSale: false,
     },
     {
       id: "wp12",
@@ -1380,6 +1516,7 @@ export const womanClothes = {
       brand: "puma",
       color: "blue",
       photo: "womanpants12",
+      onSale: true,
     },
     {
       id: "wp13",
@@ -1390,6 +1527,7 @@ export const womanClothes = {
       brand: "puma",
       color: "blue",
       photo: "womanpants13",
+      onSale: false,
     },
     {
       id: "wp14",
@@ -1400,6 +1538,7 @@ export const womanClothes = {
       brand: "puma",
       color: "red",
       photo: "womanpants14",
+      onSale: false,
     },
     {
       id: "wp15",
@@ -1410,6 +1549,7 @@ export const womanClothes = {
       brand: "puma",
       color: "red",
       photo: "womanpants15",
+      onSale: false,
     },
     {
       id: "wp16",
@@ -1420,6 +1560,7 @@ export const womanClothes = {
       brand: "puma",
       color: "green",
       photo: "womanpants16",
+      onSale: false,
     },
     {
       id: "wp17",
@@ -1430,6 +1571,7 @@ export const womanClothes = {
       brand: "nike",
       color: "green",
       photo: "womanpants17",
+      onSale: false,
     },
     {
       id: "wp18",
@@ -1440,6 +1582,7 @@ export const womanClothes = {
       brand: "nike",
       color: "blue",
       photo: "womanpants18",
+      onSale: false,
     },
     {
       id: "wp19",
@@ -1450,6 +1593,7 @@ export const womanClothes = {
       brand: "nike",
       color: "blue",
       photo: "womanpants19",
+      onSale: false,
     },
     {
       id: "wp20",
@@ -1460,6 +1604,7 @@ export const womanClothes = {
       brand: "nike",
       color: "yellow",
       photo: "womanpants20",
+      onSale: false,
     },
     {
       id: "wp21",
@@ -1470,6 +1615,7 @@ export const womanClothes = {
       brand: "adidas",
       color: "yellow",
       photo: "womanpants21",
+      onSale: false,
     },
   ],
   shoes: [
@@ -1482,6 +1628,7 @@ export const womanClothes = {
       brand: "adidas",
       color: "yellow",
       photo: "womanshoes1",
+      onSale: false,
     },
     {
       id: "ws2",
@@ -1492,6 +1639,7 @@ export const womanClothes = {
       brand: "adidas",
       color: "green",
       photo: "womanshoes2",
+      onSale: false,
     },
     {
       id: "ws3",
@@ -1502,6 +1650,7 @@ export const womanClothes = {
       brand: "adidas",
       color: "blue",
       photo: "womanshoes3",
+      onSale: true,
     },
     {
       id: "ws4",
@@ -1512,6 +1661,7 @@ export const womanClothes = {
       brand: "adidas",
       color: "red",
       photo: "womanshoes4",
+      onSale: false,
     },
     {
       id: "ws5",
@@ -1522,6 +1672,7 @@ export const womanClothes = {
       brand: "adidas",
       color: "blue",
       photo: "womanshoes5",
+      onSale: true,
     },
     {
       id: "ws6",
@@ -1532,6 +1683,7 @@ export const womanClothes = {
       brand: "adidas",
       color: "green",
       photo: "womanshoes6",
+      onSale: false,
     },
     {
       id: "ws7",
@@ -1542,6 +1694,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "green",
       photo: "womanshoes7",
+      onSale: false,
     },
     {
       id: "ws8",
@@ -1552,6 +1705,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "blue",
       photo: "womanshoes8",
+      onSale: false,
     },
     {
       id: "ws9",
@@ -1562,6 +1716,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "blue",
       photo: "womanshoes9",
+      onSale: false,
     },
     {
       id: "ws10",
@@ -1572,6 +1727,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "yellow",
       photo: "womanshoes10",
+      onSale: false,
     },
     {
       id: "ws11",
@@ -1582,6 +1738,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "red",
       photo: "womanshoes11",
+      onSale: false,
     },
     {
       id: "ws12",
@@ -1592,6 +1749,7 @@ export const womanClothes = {
       brand: "reebok",
       color: "red",
       photo: "womanshoes12",
+      onSale: false,
     },
     {
       id: "ws13",
@@ -1602,6 +1760,7 @@ export const womanClothes = {
       brand: "nike",
       color: "red",
       photo: "womanshoes13",
+      onSale: false,
     },
     {
       id: "ws14",
@@ -1612,6 +1771,7 @@ export const womanClothes = {
       brand: "nike",
       color: "green",
       photo: "womanshoes14",
+      onSale: false,
     },
     {
       id: "ws15",
@@ -1622,6 +1782,7 @@ export const womanClothes = {
       brand: "nike",
       color: "green",
       photo: "womanshoes15",
+      onSale: false,
     },
     {
       id: "ws16",
@@ -1632,6 +1793,7 @@ export const womanClothes = {
       brand: "nike",
       color: "green",
       photo: "womanshoes16",
+      onSale: false,
     },
     {
       id: "ws17",
@@ -1642,6 +1804,7 @@ export const womanClothes = {
       brand: "nike",
       color: "blue",
       photo: "womanshoes17",
+      onSale: false,
     },
     {
       id: "ws18",
@@ -1652,6 +1815,7 @@ export const womanClothes = {
       brand: "nike",
       color: "red",
       photo: "womanshoes18",
+      onSale: false,
     },
     {
       id: "ws19",
@@ -1662,6 +1826,7 @@ export const womanClothes = {
       brand: "puma",
       color: "green",
       photo: "womanshoes19",
+      onSale: true,
     },
     {
       id: "ws20",
@@ -1672,6 +1837,7 @@ export const womanClothes = {
       brand: "puma",
       color: "blue",
       photo: "womanshoes20",
+      onSale: false,
     },
     {
       id: "ws21",
@@ -1682,6 +1848,7 @@ export const womanClothes = {
       brand: "puma",
       color: "yellow",
       photo: "womanshoes21",
+      onSale: false,
     },
     {
       id: "ws22",
@@ -1692,6 +1859,7 @@ export const womanClothes = {
       brand: "puma",
       color: "yellow",
       photo: "womanshoes22",
+      onSale: false,
     },
     {
       id: "ws23",
@@ -1702,6 +1870,7 @@ export const womanClothes = {
       brand: "puma",
       color: "green",
       photo: "womanshoes23",
+      onSale: false,
     },
     {
       id: "ws24",
@@ -1712,6 +1881,7 @@ export const womanClothes = {
       brand: "puma",
       color: "blue",
       photo: "womanshoes24",
+      onSale: false,
     },
     {
       id: "ws25",
@@ -1722,6 +1892,7 @@ export const womanClothes = {
       brand: "puma",
       color: "red",
       photo: "womanshoes25",
+      onSale: false,
     },
     {
       id: "ws26",
@@ -1732,6 +1903,7 @@ export const womanClothes = {
       brand: "puma",
       color: "blue",
       photo: "womanshoes26",
+      onSale: false,
     },
     {
       id: "ws27",
@@ -1742,6 +1914,7 @@ export const womanClothes = {
       brand: "puma",
       color: "red",
       photo: "womanshoes27",
+      onSale: true,
     },
   ],
 };

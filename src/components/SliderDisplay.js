@@ -1,8 +1,7 @@
-import React, { useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 import styled from "styled-components";
 import SliderTile from "./SliderTile";
 import Button from "./Button";
-import { manClothes, womanClothes } from "../data";
 
 const StyledItemsWrapper = styled.div`
   display: grid;
@@ -27,6 +26,11 @@ const PrevButton = styled(Button)`
   width: 20vh;
   font-size: 1em;
   outline: none;
+  transition: transform 0.3s ease-in-out;
+
+  :active {
+    transform: scale(1.1);
+  }
 
   @media screen and (max-width: 768px) {
     width: 10vh;
@@ -54,13 +58,14 @@ const sliderReducer = (state, action) => {
   if (action.type === "NEXT") {
     return {
       ...state,
-      slideIndex: (state.slideIndex + 1) % 15,
+      slideIndex: (state.slideIndex + 1) % action.arrLength,
     };
   }
   if (action.type === "PREV") {
     return {
       ...state,
-      slideIndex: state.slideIndex === 0 ? 15 : state.slideIndex - 1,
+      slideIndex:
+        state.slideIndex === 0 ? action.arrLength : state.slideIndex - 1,
     };
   }
   if (action.type === "GOTO") {
@@ -71,26 +76,27 @@ const sliderReducer = (state, action) => {
   }
 };
 
-const initialState = {
-  slideIndex: 7,
-};
+const SliderDisplay = ({ onSaleItems }) => {
+  const initialState = {
+    slideIndex: Math.floor(onSaleItems.length / 2), // <-- its always 0 because usestate is set to [], need fix
+  };
 
-const SliderDisplay = ({ isMen }) => {
   const [slide, dispatch] = useReducer(sliderReducer, initialState);
-  const saleItems = isMen
-    ? manClothes.tshirts.slice(0, 15)
-    : womanClothes.tshirts.slice(0, 15);
+
+  useEffect(() => {
+    dispatch({ type: "GOTO", slide: Math.floor(onSaleItems.length / 2) });
+  }, [onSaleItems]);
 
   return (
     <>
       <StyledItemsWrapper>
-        {saleItems.map((item, i, arr) => {
-          let offset = saleItems.length - 1 - slide.slideIndex - i;
+        {onSaleItems.map((item, i, arr) => {
+          let offset = onSaleItems.length - 1 - slide.slideIndex - i;
 
           let invertedI = arr.length - 1 - i;
           return (
             <SliderTile
-              item={item}
+              {...item}
               key={i}
               i={i}
               offset={offset}
@@ -101,13 +107,30 @@ const SliderDisplay = ({ isMen }) => {
           );
         })}
       </StyledItemsWrapper>
-      <PrevButton handleClick={() => dispatch({ type: "PREV" })}>
+      <PrevButton
+        handleClick={() =>
+          dispatch({ type: "PREV", arrLength: onSaleItems.length })
+        }
+      >
         prev
       </PrevButton>
-      <NextButton handleClick={() => dispatch({ type: "NEXT" })}>
+      <NextButton
+        handleClick={() =>
+          dispatch({ type: "NEXT", arrLength: onSaleItems.length })
+        }
+      >
         next
       </NextButton>
-      <SeeMoreButton>See more</SeeMoreButton>
+      <SeeMoreButton
+        handleClick={() =>
+          window.scrollTo({
+            top: window.innerHeight * 0.9,
+            behavior: "smooth",
+          })
+        }
+      >
+        See more
+      </SeeMoreButton>
     </>
   );
 };

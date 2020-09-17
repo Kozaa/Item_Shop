@@ -13,6 +13,11 @@ const StyledButton = styled.button`
   font-size: 0.7em;
 
   padding: 10px 20px;
+
+  :hover {
+    cursor: pointer;
+    border: 2px black solid;
+  }
 `;
 
 const Button = ({ children, handleClick, className }) => (

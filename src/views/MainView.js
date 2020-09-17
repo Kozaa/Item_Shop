@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from "styled-components";
 import SliderDisplay from "../components/SliderDisplay";
 import Navigation from "../components/Navigation";
 import MainClothesDisplay from "../components/MainClothesDisplay";
+import Footer from "../components/Footer";
 
 import { manClothes, womanClothes } from "../data"; //for testing delete later
 
@@ -32,35 +33,15 @@ const MainView = ({ location }) => {
       : [...womanClothes.tshirts, ...womanClothes.pants, ...womanClothes.shoes]
   );
 
+  const [onSaleItems, setOnSaleItems] = useState([]);
+
   useEffect(() => {
-    sortByParameters();
-  }, [sortParameters, genderChoise]);
-
-  const handleGenderChange = () => {
-    setGenderChoise(!genderChoise);
-  };
-
-  const getParameters = (event) => {
-    event.persist();
-
-    setSortParameters({
-      ...sortParameters,
-      [event.target.name]: event.target.value,
-    });
-  };
-
-  const sortByParameters = () => {
-    console.log("initial clothes data: ", clothesData);
-    console.log("initial sortParameters: ", sortParameters);
-
     const unsorted = genderChoise ? manClothes : womanClothes;
 
     const sortedByType =
       !sortParameters.Item || sortParameters.Item === "All"
         ? [...unsorted.tshirts, ...unsorted.pants, ...unsorted.shoes]
         : unsorted[sortParameters.Item.toLowerCase()];
-
-    console.log("sorted by type: ", sortedByType);
 
     const sortedByBrand = sortedByType.filter((item) => {
       return !sortParameters.Brand || sortParameters.Brand === "All"
@@ -85,18 +66,67 @@ const MainView = ({ location }) => {
     });
 
     setClothesData(sortedByPrice);
+  }, [sortParameters, genderChoise]);
+
+  const handleGenderChange = () => {
+    setGenderChoise(!genderChoise);
   };
+
+  const handleNavItemClick = (type) => {
+    setSortParameters({
+      ...sortParameters,
+      Item: type,
+    });
+
+    window.scrollTo({
+      top: window.innerHeight * 0.9,
+      behavior: "smooth",
+    });
+  };
+
+  const getParameters = (event) => {
+    event.persist();
+
+    setSortParameters({
+      ...sortParameters,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  useEffect(() => {
+    let allItemsArray = genderChoise
+      ? [...manClothes.tshirts, ...manClothes.pants, ...manClothes.shoes]
+      : [...womanClothes.tshirts, ...womanClothes.pants, ...womanClothes.shoes];
+
+    let filteredOnSaleItems = allItemsArray.filter((item) => item.onSale);
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+    shuffleArray(filteredOnSaleItems);
+
+    setOnSaleItems(filteredOnSaleItems);
+  }, [genderChoise]);
 
   return (
     <ThemeProvider theme={genderChoise ? menTheme : womenTheme}>
       <MainViewWrapper>
-        <Navigation isMen={genderChoise} toggleGender={handleGenderChange} />
-        <SliderDisplay isMen={genderChoise} />
+        <Navigation
+          isMen={genderChoise}
+          toggleGender={handleGenderChange}
+          handleNavItemClick={handleNavItemClick}
+        />
+        <SliderDisplay onSaleItems={onSaleItems} />
         <MainClothesDisplay
           isMen={genderChoise}
           getParameters={getParameters}
           clothesData={clothesData}
+          selected={sortParameters.Item}
         />
+        <Footer />
       </MainViewWrapper>
     </ThemeProvider>
   );

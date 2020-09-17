@@ -74,12 +74,12 @@ const Price = styled.div`
   padding: 8px;
 `;
 
-const ItemTile = ({ item, offset, handleTileClick }) => {
+const ItemTile = ({ price, title, photo, offset, handleTileClick }) => {
   return (
-    <StyledTile photo={item.photo} offset={offset} onClick={handleTileClick}>
+    <StyledTile photo={photo} offset={offset} onClick={handleTileClick}>
       <ItemDetails>
-        <Detail>{item.title}</Detail>
-        <Price>${item.price}</Price>
+        <Detail>{title}</Detail>
+        <Price>${price}</Price>
       </ItemDetails>
     </StyledTile>
   );

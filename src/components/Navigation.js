@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Title from "../components/Title";
 import Cart from "../components/Cart";
-
+import Button from "../components/Button";
 const StyledNavigation = styled.header`
   position: fixed;
   z-index: 2;
@@ -14,7 +14,7 @@ const StyledNavigation = styled.header`
 
   width: 100%;
   height: 10vh;
-  min-height: calc(2em + 10px);
+
   background-color: white;
   padding: 0 20px;
 `;
@@ -28,15 +28,36 @@ const NavItemsWrapper = styled(StyledNavigation)`
 const StyledLink = styled(Link)`
   color: ${({ theme }) => theme.genderButton};
   text-decoration: none;
+  padding: 10px 20px;
+
+  :hover {
+    background-color: #ddd;
+  }
 `;
 
-const Navigation = ({ isMen, toggleGender }) => (
+const StyledButton = styled(Button)`
+  background-color: transparent;
+  font-size: 1em;
+  color: black;
+
+  :hover {
+    background-color: #ddd;
+  }
+`;
+
+const Navigation = ({ isMen, toggleGender, handleNavItemClick }) => (
   <StyledNavigation>
     <Title location="mainView">ItemShop</Title>
     <NavItemsWrapper>
-      <h4>t-shirts</h4>
-      <h4>pants</h4>
-      <h4>shoes</h4>
+      <StyledButton handleClick={() => handleNavItemClick("tshirts")}>
+        t-shirts
+      </StyledButton>
+      <StyledButton handleClick={() => handleNavItemClick("pants")}>
+        pants
+      </StyledButton>
+      <StyledButton handleClick={() => handleNavItemClick("shoes")}>
+        shoes
+      </StyledButton>
     </NavItemsWrapper>
     <StyledLink to={isMen ? "/women" : "/men"} onClick={toggleGender}>
       {isMen ? "Women" : "Men"}

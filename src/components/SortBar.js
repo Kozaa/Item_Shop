@@ -34,9 +34,13 @@ const StyledSortBar = styled.form`
   }
 `;
 
-const SortBar = ({ getParameters }) => (
+const SortBar = ({ getParameters, selected }) => (
   <StyledSortBar onChange={getParameters}>
-    <DropDown type="Item" options={["All", "Tshirts", "Pants", "Shoes"]} />
+    <DropDown
+      type="Item"
+      selected={selected}
+      options={["All", "Tshirts", "Pants", "Shoes"]}
+    />
     <DropDown
       type="Brand"
       options={["All", "Nike", "Reebok", "Puma", "Adidas"]}

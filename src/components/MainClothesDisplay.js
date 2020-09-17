@@ -4,8 +4,10 @@ import SortBar from "./SortBar";
 import ItemTile from "./ItemTile";
 
 const DisplayWrapper = styled.main`
+  min-height: calc(90vh - 100px);
   width: 100%;
-  padding: 20px 0;
+  padding-top: 20px;
+  padding-bottom: 60px;
   position: relative;
 
   display: grid;
@@ -18,20 +20,18 @@ const DisplayWrapper = styled.main`
 
 const StyledApology = styled.div`
   position: absolute;
-  bottom: 0;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%) translateY(100%);
-  height: 50vh;
   width: 100%;
   text-align: center;
   background-color: inherit;
 `;
 
-const MainClothesDisplay = ({ getParameters, clothesData }) => (
+const MainClothesDisplay = ({ getParameters, clothesData, selected }) => (
   <>
-    <SortBar getParameters={getParameters}></SortBar>
+    <SortBar getParameters={getParameters} selected={selected} />
     <DisplayWrapper>
-      {console.log("clothesData from display", clothesData)}
       {clothesData.length !== 0 ? (
         clothesData.map((item, i) => <ItemTile key={i} {...item} />)
       ) : (
