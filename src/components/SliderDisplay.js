@@ -26,10 +26,10 @@ const PrevButton = styled(Button)`
   width: 20vh;
   font-size: 1em;
   outline: none;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.1s ease-in-out;
 
   :active {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   @media screen and (max-width: 768px) {

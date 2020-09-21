@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-const StyledItemTile = styled.div`
+const StyledItemTile = styled(Link)`
   height: 50vh;
   position: relative;
 
   font-family: "Jura", sans-serif;
   font-weight: 700;
+  color: black;
+  text-decoration: none;
 
   :after {
     content: "$${({ price }) => price}";
@@ -32,8 +35,8 @@ const StyledDescription = styled.div`
   padding: 10px;
 `;
 
-const ItemTile = ({ photo, price, title }) => (
-  <StyledItemTile price={price}>
+const ItemTile = ({ photo, price, title, id }) => (
+  <StyledItemTile price={price} to={`/item/${id}`}>
     <StyledImg src={`assets/clothes/${photo}.png`} />
     <StyledDescription>{title}</StyledDescription>
   </StyledItemTile>

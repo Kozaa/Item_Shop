@@ -1,7 +1,7 @@
 export const womenTheme = {
   primaryTextColor: "FFF",
   secondaryTextColor: "#000",
-  backgroundColor: "#FFCDB2",
+  backgroundColor: "#FFEEE5",
   primaryThemeColor: "#6D6875",
   secondaryThemeColor: "#E5989B",
   genderButton: "#524FEA",

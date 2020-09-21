@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import HeroView from "./HeroView";
 import MainView from "./MainView";
+import ItemView from "./ItemView";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -46,6 +47,7 @@ const Root = () => (
         <Route exact path="/" component={HeroView} />
         <Route path="/men" component={MainView} />
         <Route path="/women" component={MainView} />
+        <Route path="/item/:id" render={ItemView} />
       </Switch>
     </BrowserRouter>
   </>
