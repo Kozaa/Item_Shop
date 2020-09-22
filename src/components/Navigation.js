@@ -25,7 +25,7 @@ const NavItemsWrapper = styled(StyledNavigation)`
   position: relative;
 `;
 
-const StyledLink = styled(Link)`
+const StyledGenderLink = styled(Link)`
   color: ${({ theme }) => theme.genderButton};
   text-decoration: none;
   padding: 10px 20px;
@@ -35,10 +35,11 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const StyledButton = styled(Button)`
-  background-color: transparent;
+const StyledLink = styled(Link)`
   font-size: 1em;
   color: black;
+  padding: 10px 20px;
+  text-decoration: none;
 
   :hover {
     background-color: #ddd;
@@ -49,21 +50,36 @@ const Navigation = ({ isMen, toggleGender, handleNavItemClick }) => (
   <StyledNavigation>
     <Title location="mainView">ItemShop</Title>
     <NavItemsWrapper>
-      <StyledButton handleClick={() => handleNavItemClick("tshirts")}>
+      <StyledLink
+        onClick={() => handleNavItemClick("tshirts")}
+        to={isMen ? "/men" : "/women"}
+      >
         t-shirts
-      </StyledButton>
-      <StyledButton handleClick={() => handleNavItemClick("pants")}>
+      </StyledLink>
+      <StyledLink
+        onClick={() => handleNavItemClick("pants")}
+        to={isMen ? "/men" : "/women"}
+      >
         pants
-      </StyledButton>
-      <StyledButton handleClick={() => handleNavItemClick("shoes")}>
+      </StyledLink>
+      <StyledLink
+        onClick={() => handleNavItemClick("shoes")}
+        to={isMen ? "/men" : "/women"}
+      >
         shoes
-      </StyledButton>
+      </StyledLink>
     </NavItemsWrapper>
-    <StyledLink to={isMen ? "/women" : "/men"} onClick={toggleGender}>
+    <StyledGenderLink to={isMen ? "/women" : "/men"} onClick={toggleGender}>
       {isMen ? "Women" : "Men"}
-    </StyledLink>
+    </StyledGenderLink>
     <Cart />
   </StyledNavigation>
 );
+
+Navigation.defaultProps = {
+  handleNavItemClick: function () {
+    console.log("hello");
+  },
+};
 
 export default Navigation;

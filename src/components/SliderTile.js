@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-const StyledTile = styled.div`
+const StyledTileLink = styled(Link)`
   width: 50vh;
   height: 60vh;
 
@@ -74,15 +75,25 @@ const Price = styled.div`
   padding: 8px;
 `;
 
-const ItemTile = ({ price, title, photo, offset, handleTileClick }) => {
-  return (
-    <StyledTile photo={photo} offset={offset} onClick={handleTileClick}>
-      <ItemDetails>
-        <Detail>{title}</Detail>
-        <Price>${price}</Price>
-      </ItemDetails>
-    </StyledTile>
-  );
-};
-
+const ItemTile = ({
+  price,
+  title,
+  photo,
+  offset,
+  handleTileClick,
+  id,
+  isMen,
+}) => (
+  <StyledTileLink
+    photo={photo}
+    offset={offset}
+    onClick={handleTileClick}
+    to={offset === 0 ? `/item/${id}` : isMen ? "/men" : "/women"}
+  >
+    <ItemDetails>
+      <Detail>{title}</Detail>
+      <Price>${price}</Price>
+    </ItemDetails>
+  </StyledTileLink>
+);
 export default ItemTile;

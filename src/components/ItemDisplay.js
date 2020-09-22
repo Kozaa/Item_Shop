@@ -13,6 +13,7 @@ const StyledWrapper = styled.div`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    height: auto;
   }
 `;
 
@@ -44,7 +45,7 @@ const StyledPrice = styled.div`
 
 const ItemDisplay = ({ item }) => (
   <StyledWrapper>
-    <StyledImg src={`../assets/clothes/${item.photo}.png`} alt={item.name} />
+    <StyledImg src={`../assets/clothes/${item.photo}.png`} alt={item.title} />
     <ItemDescWrapper>
       <StyledTitle>{item.title}</StyledTitle>
       <StyledDescription>{item.desc}</StyledDescription>

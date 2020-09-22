@@ -10,6 +10,7 @@ const StyledWrapper = styled.div`
 const StyledSizeOption = styled.div`
   width: 40px;
   height: 40px;
+  margin-left: 5px;
   background-color: ${({ theme }) => theme.primaryThemeColor};
   display: flex;
   align-items: center;
@@ -18,7 +19,6 @@ const StyledSizeOption = styled.div`
 
 const PickSize = () => (
   <StyledWrapper>
-    <span>Sizes:</span>
     <StyledSizeOption>S</StyledSizeOption>
     <StyledSizeOption>M</StyledSizeOption>
     <StyledSizeOption>L</StyledSizeOption>

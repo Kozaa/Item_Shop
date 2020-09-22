@@ -28,9 +28,9 @@ const StyledApology = styled.div`
   background-color: inherit;
 `;
 
-const MainClothesDisplay = ({ getParameters, clothesData, selected }) => (
+const MainClothesDisplay = ({ getParameters, clothesData, sortParameters }) => (
   <>
-    <SortBar getParameters={getParameters} selected={selected} />
+    <SortBar getParameters={getParameters} sortParameters={sortParameters} />
     <DisplayWrapper>
       {clothesData.length !== 0 ? (
         clothesData.map((item, i) => <ItemTile key={i} {...item} />)

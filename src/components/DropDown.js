@@ -12,29 +12,16 @@ const StyledLabel = styled.label`
   z-index: 1;
 `;
 
-const DropDown = ({ type, options, selected }) => (
+const DropDown = ({ type, options, value, getParameters }) => (
   <>
     <StyledLabel htmlFor={type}>
       {type}:
-      <StyledSelect name={type}>
-        {options.map((option) => {
-          if (
-            selected &&
-            option[0].toLowerCase() === selected[0].toLowerCase()
-          ) {
-            return (
-              <option key={option} selected={true} value={option}>
-                {option}
-              </option>
-            );
-          } else {
-            return (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            );
-          }
-        })}
+      <StyledSelect name={type} value={value} onChange={getParameters}>
+        {options.map((option) => (
+          <option key={option} value={option}>
+            {option.charAt(0).toUpperCase() + option.slice(1)}
+          </option>
+        ))}
       </StyledSelect>
     </StyledLabel>
   </>

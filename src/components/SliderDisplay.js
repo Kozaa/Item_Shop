@@ -76,7 +76,7 @@ const sliderReducer = (state, action) => {
   }
 };
 
-const SliderDisplay = ({ onSaleItems }) => {
+const SliderDisplay = ({ onSaleItems, isMen }) => {
   const initialState = {
     slideIndex: Math.floor(onSaleItems.length / 2), // <-- its always 0 because usestate is set to [], need fix
   };
@@ -100,6 +100,7 @@ const SliderDisplay = ({ onSaleItems }) => {
               key={i}
               i={i}
               offset={offset}
+              isMen={isMen}
               handleTileClick={() =>
                 dispatch({ type: "GOTO", slide: invertedI })
               }

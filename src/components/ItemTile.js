@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const StyledItemTile = styled(Link)`
-  height: 50vh;
   position: relative;
+  width: 30vh;
 
   font-family: "Jura", sans-serif;
   font-weight: 700;
@@ -25,7 +25,7 @@ const StyledItemTile = styled(Link)`
 `;
 
 const StyledImg = styled.img`
-  width: 30vh;
+  width: 100%;
   height: 40vh;
 `;
 
@@ -37,9 +37,16 @@ const StyledDescription = styled.div`
 
 const ItemTile = ({ photo, price, title, id }) => (
   <StyledItemTile price={price} to={`/item/${id}`}>
-    <StyledImg src={`assets/clothes/${photo}.png`} />
+    <StyledImg src={`../assets/clothes/${photo}.png`} alt={title} />
     <StyledDescription>{title}</StyledDescription>
   </StyledItemTile>
 );
+
+ItemTile.defaultProps = {
+  photo: "manpants4",
+  id: "mp4",
+  price: 23.34,
+  title: "men pants number 4 (deafult prop)",
+};
 
 export default ItemTile;

@@ -4,7 +4,6 @@ import styled from "styled-components";
 const StyledDiv = styled.div`
   width: 100%;
   padding: 20px;
-  margin: 50px 0;
   background-color: ${({ theme }) => theme.primaryThemeColor};
 `;
 

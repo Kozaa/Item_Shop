@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import HeroView from "./HeroView";
@@ -39,18 +39,76 @@ body {
 
 `;
 
-const Root = () => (
-  <>
-    <GlobalStyle />
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={HeroView} />
-        <Route path="/men" component={MainView} />
-        <Route path="/women" component={MainView} />
-        <Route path="/item/:id" render={ItemView} />
-      </Switch>
-    </BrowserRouter>
-  </>
-);
+const Root = () => {
+  const [sortParameters, setSortParameters] = useState({
+    Item: "",
+    Brand: "",
+    Color: "Red",
+    Sort: "",
+  });
+
+  const getParameters = (event) => {
+    event.persist();
+    console.log(event.target.value);
+
+    setSortParameters({
+      ...sortParameters,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleNavItemClick = (type) => {
+    setSortParameters({
+      Item: type,
+      Brand: "",
+      Color: "",
+      Sort: "",
+    });
+
+    window.scrollTo({
+      top: window.innerHeight * 0.9,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <>
+      <GlobalStyle />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={HeroView} />
+          <Route
+            path="/men"
+            render={(props) => (
+              <MainView
+                {...props}
+                sortParameters={sortParameters}
+                getParameters={getParameters}
+                handleNavItemClick={handleNavItemClick}
+              />
+            )}
+          />
+          <Route
+            path="/women"
+            render={(props) => (
+              <MainView
+                {...props}
+                sortParameters={sortParameters}
+                getParameters={getParameters}
+                handleNavItemClick={handleNavItemClick}
+              />
+            )}
+          />
+          <Route
+            path="/item/:id"
+            render={(props) => (
+              <ItemView {...props} handleNavItemClick={handleNavItemClick} />
+            )}
+          />
+        </Switch>
+      </BrowserRouter>
+    </>
+  );
+};
 
 export default Root;

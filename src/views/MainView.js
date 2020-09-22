@@ -14,18 +14,16 @@ const MainViewWrapper = styled.div`
   width: 100%;
 `;
 
-const MainView = ({ location }) => {
+const MainView = ({
+  location,
+  sortParameters,
+  getParameters,
+  handleNavItemClick,
+}) => {
   // true is men, false is women
   const [genderChoise, setGenderChoise] = useState(
     location.pathname === "/men" ? true : false
   );
-
-  const [sortParameters, setSortParameters] = useState({
-    Item: "",
-    Brand: "",
-    Color: "",
-    Sort: "",
-  });
 
   const [clothesData, setClothesData] = useState(
     genderChoise
@@ -72,27 +70,6 @@ const MainView = ({ location }) => {
     setGenderChoise(!genderChoise);
   };
 
-  const handleNavItemClick = (type) => {
-    setSortParameters({
-      ...sortParameters,
-      Item: type,
-    });
-
-    window.scrollTo({
-      top: window.innerHeight * 0.9,
-      behavior: "smooth",
-    });
-  };
-
-  const getParameters = (event) => {
-    event.persist();
-
-    setSortParameters({
-      ...sortParameters,
-      [event.target.name]: event.target.value,
-    });
-  };
-
   useEffect(() => {
     let allItemsArray = genderChoise
       ? [...manClothes.tshirts, ...manClothes.pants, ...manClothes.shoes]
@@ -119,12 +96,12 @@ const MainView = ({ location }) => {
           toggleGender={handleGenderChange}
           handleNavItemClick={handleNavItemClick}
         />
-        <SliderDisplay onSaleItems={onSaleItems} />
+        <SliderDisplay onSaleItems={onSaleItems} isMen={genderChoise} />
         <MainClothesDisplay
           isMen={genderChoise}
           getParameters={getParameters}
           clothesData={clothesData}
-          selected={sortParameters.Item}
+          sortParameters={sortParameters}
         />
         <Footer />
       </MainViewWrapper>
