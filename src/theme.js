@@ -1,5 +1,5 @@
 export const womenTheme = {
-  primaryTextColor: "FFF",
+  primaryTextColor: "#FFF",
   secondaryTextColor: "#000",
   backgroundColor: "#FFEEE5",
   primaryThemeColor: "#6D6875",

@@ -5,6 +5,7 @@ import SliderDisplay from "../components/SliderDisplay";
 import Navigation from "../components/Navigation";
 import MainClothesDisplay from "../components/MainClothesDisplay";
 import Footer from "../components/Footer";
+import CartModule from "../components/CartModule";
 
 import { manClothes, womanClothes } from "../data"; //for testing delete later
 
@@ -19,6 +20,11 @@ const MainView = ({
   sortParameters,
   getParameters,
   handleNavItemClick,
+  resetParameters,
+  cart,
+  cartIsVisible,
+  toggleCartIsVisible,
+  handleRemoveFromCart,
 }) => {
   // true is men, false is women
   const [genderChoise, setGenderChoise] = useState(
@@ -68,6 +74,7 @@ const MainView = ({
 
   const handleGenderChange = () => {
     setGenderChoise(!genderChoise);
+    resetParameters();
   };
 
   useEffect(() => {
@@ -91,10 +98,18 @@ const MainView = ({
   return (
     <ThemeProvider theme={genderChoise ? menTheme : womenTheme}>
       <MainViewWrapper>
+        <CartModule
+          cart={cart}
+          toggleCartIsVisible={toggleCartIsVisible}
+          cartIsVisible={cartIsVisible}
+          handleRemoveFromCart={handleRemoveFromCart}
+        />
         <Navigation
           isMen={genderChoise}
           toggleGender={handleGenderChange}
           handleNavItemClick={handleNavItemClick}
+          cart={cart}
+          toggleCartIsVisible={toggleCartIsVisible}
         />
         <SliderDisplay onSaleItems={onSaleItems} isMen={genderChoise} />
         <MainClothesDisplay

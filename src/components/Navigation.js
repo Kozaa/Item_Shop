@@ -46,7 +46,14 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const Navigation = ({ isMen, toggleGender, handleNavItemClick }) => (
+const Navigation = ({
+  isMen,
+  toggleGender,
+  handleNavItemClick,
+  resetParameters,
+  cart,
+  toggleCartIsVisible,
+}) => (
   <StyledNavigation>
     <Title location="mainView">ItemShop</Title>
     <NavItemsWrapper>
@@ -69,16 +76,25 @@ const Navigation = ({ isMen, toggleGender, handleNavItemClick }) => (
         shoes
       </StyledLink>
     </NavItemsWrapper>
-    <StyledGenderLink to={isMen ? "/women" : "/men"} onClick={toggleGender}>
+    <StyledGenderLink
+      to={isMen ? "/women" : "/men"}
+      onClick={() => {
+        toggleGender();
+        resetParameters();
+      }}
+    >
       {isMen ? "Women" : "Men"}
     </StyledGenderLink>
-    <Cart />
+    <Cart toggleCartIsVisible={toggleCartIsVisible} cart={cart} />
   </StyledNavigation>
 );
 
 Navigation.defaultProps = {
-  handleNavItemClick: function () {
-    console.log("hello");
+  toggleGender: function () {
+    return;
+  },
+  resetParameters: function () {
+    return;
   },
 };
 

@@ -7,6 +7,7 @@ import ItemDisplay from "../components/ItemDisplay";
 import Disclaimer from "../components/Disclaimer";
 import SimilarItems from "../components/SimilarItems";
 import Footer from "../components/Footer";
+import CartModule from "../components/CartModule";
 
 const StyledWrapper = styled.div`
   width: 100%;
@@ -28,9 +29,16 @@ const clothes = [
   ...womanClothes.shoes,
 ];
 
-const ItemView = ({ match, handleNavItemClick }) => {
-  console.log(match.params.id);
-
+const ItemView = ({
+  match,
+  handleNavItemClick,
+  resetParameters,
+  handleAddToCart,
+  cart,
+  cartIsVisible,
+  toggleCartIsVisible,
+  handleRemoveFromCart,
+}) => {
   window.scrollTo(0, 0);
 
   const itemId = match.params.id;
@@ -67,9 +75,21 @@ const ItemView = ({ match, handleNavItemClick }) => {
 
   return (
     <ThemeProvider theme={isMen ? menTheme : womenTheme}>
-      <Navigation isMen={isMen} handleNavItemClick={handleNavItemClick} />
+      <Navigation
+        isMen={isMen}
+        handleNavItemClick={handleNavItemClick}
+        resetParameters={resetParameters}
+        cart={cart}
+        toggleCartIsVisible={toggleCartIsVisible}
+      />
+      <CartModule
+        cart={cart}
+        cartIsVisible={cartIsVisible}
+        toggleCartIsVisible={toggleCartIsVisible}
+        handleRemoveFromCart={handleRemoveFromCart}
+      />
       <StyledWrapper>
-        <ItemDisplay item={findItem()} />
+        <ItemDisplay item={findItem()} handleAddToCart={handleAddToCart} />
         <Disclaimer />
         <SimilarItems similarItems={getSimilarItems()} />
         <Footer />

@@ -47,6 +47,26 @@ const Root = () => {
     Sort: "",
   });
 
+  const [cart, setCart] = useState([]);
+  const [cartIsVisible, setCartIsVisible] = useState(true);
+
+  const handleAddToCart = (item) => {
+    console.log([...cart, item]);
+    setCart([...cart, item]);
+  };
+
+  const handleRemoveFromCart = (index) => {
+    let helperArr = cart;
+
+    helperArr.splice(index, 1);
+
+    setCart([...helperArr]);
+  };
+
+  const toggleCartIsVisible = () => {
+    setCartIsVisible(!cartIsVisible);
+  };
+
   const getParameters = (event) => {
     event.persist();
     console.log(event.target.value);
@@ -54,6 +74,15 @@ const Root = () => {
     setSortParameters({
       ...sortParameters,
       [event.target.name]: event.target.value,
+    });
+  };
+
+  const resetParameters = () => {
+    setSortParameters({
+      Item: "",
+      Brand: "",
+      Color: "",
+      Sort: "",
     });
   };
 
@@ -78,31 +107,34 @@ const Root = () => {
         <Switch>
           <Route exact path="/" component={HeroView} />
           <Route
-            path="/men"
+            path={["/men", "/women"]}
             render={(props) => (
               <MainView
                 {...props}
                 sortParameters={sortParameters}
                 getParameters={getParameters}
                 handleNavItemClick={handleNavItemClick}
-              />
-            )}
-          />
-          <Route
-            path="/women"
-            render={(props) => (
-              <MainView
-                {...props}
-                sortParameters={sortParameters}
-                getParameters={getParameters}
-                handleNavItemClick={handleNavItemClick}
+                resetParameters={resetParameters}
+                cart={cart}
+                toggleCartIsVisible={toggleCartIsVisible}
+                cartIsVisible={cartIsVisible}
+                handleRemoveFromCart={handleRemoveFromCart}
               />
             )}
           />
           <Route
             path="/item/:id"
             render={(props) => (
-              <ItemView {...props} handleNavItemClick={handleNavItemClick} />
+              <ItemView
+                {...props}
+                handleNavItemClick={handleNavItemClick}
+                resetParameters={resetParameters}
+                handleAddToCart={handleAddToCart}
+                cart={cart}
+                toggleCartIsVisible={toggleCartIsVisible}
+                cartIsVisible={cartIsVisible}
+                handleRemoveFromCart={handleRemoveFromCart}
+              />
             )}
           />
         </Switch>

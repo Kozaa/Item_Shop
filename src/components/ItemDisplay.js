@@ -43,7 +43,7 @@ const StyledPrice = styled.div`
   font-size: 2em;
 `;
 
-const ItemDisplay = ({ item }) => (
+const ItemDisplay = ({ item, handleAddToCart }) => (
   <StyledWrapper>
     <StyledImg src={`../assets/clothes/${item.photo}.png`} alt={item.title} />
     <ItemDescWrapper>
@@ -51,7 +51,7 @@ const ItemDisplay = ({ item }) => (
       <StyledDescription>{item.desc}</StyledDescription>
       <PickSize />
       <StyledPrice>Price: ${item.price}</StyledPrice>
-      <Button>Add to cart</Button>
+      <Button handleClick={() => handleAddToCart(item)}>Add to cart</Button>
     </ItemDescWrapper>
   </StyledWrapper>
 );
