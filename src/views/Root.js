@@ -43,16 +43,18 @@ const Root = () => {
   const [sortParameters, setSortParameters] = useState({
     Item: "",
     Brand: "",
-    Color: "Red",
+    Color: "",
     Sort: "",
   });
 
   const [cart, setCart] = useState([]);
-  const [cartIsVisible, setCartIsVisible] = useState(true);
+  const [cartIsVisible, setCartIsVisible] = useState(false);
 
-  const handleAddToCart = (item) => {
-    console.log([...cart, item]);
-    setCart([...cart, item]);
+  const handleAddToCart = (item, size) => {
+    const cartItem = Object.assign({}, item); //brake of object reference
+    cartItem.size = size;
+
+    setCart([...cart, cartItem]);
   };
 
   const handleRemoveFromCart = (index) => {
@@ -69,7 +71,6 @@ const Root = () => {
 
   const getParameters = (event) => {
     event.persist();
-    console.log(event.target.value);
 
     setSortParameters({
       ...sortParameters,

@@ -11,18 +11,31 @@ const StyledSizeOption = styled.div`
   width: 40px;
   height: 40px;
   margin-left: 5px;
-  background-color: ${({ theme }) => theme.primaryThemeColor};
+  background-color: ${({ theme, selectedSize, id }) =>
+    id === selectedSize ? theme.secondaryThemeColor : theme.primaryThemeColor};
   display: flex;
   align-items: center;
   justify-content: center;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
-const PickSize = () => (
+let sizeHelperArray = ["S", "M", "L", "XL"];
+
+const PickSize = ({ handleSizeChange, selectedSize }) => (
   <StyledWrapper>
-    <StyledSizeOption>S</StyledSizeOption>
-    <StyledSizeOption>M</StyledSizeOption>
-    <StyledSizeOption>L</StyledSizeOption>
-    <StyledSizeOption>XL</StyledSizeOption>
+    {sizeHelperArray.map((item) => (
+      <StyledSizeOption
+        id={item}
+        key={item}
+        selectedSize={selectedSize}
+        onClick={handleSizeChange}
+      >
+        {item}
+      </StyledSizeOption>
+    ))}
   </StyledWrapper>
 );
 

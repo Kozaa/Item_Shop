@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import PickSize from "./PickSize";
 import Button from "./Button";
@@ -43,17 +43,33 @@ const StyledPrice = styled.div`
   font-size: 2em;
 `;
 
-const ItemDisplay = ({ item, handleAddToCart }) => (
-  <StyledWrapper>
-    <StyledImg src={`../assets/clothes/${item.photo}.png`} alt={item.title} />
-    <ItemDescWrapper>
-      <StyledTitle>{item.title}</StyledTitle>
-      <StyledDescription>{item.desc}</StyledDescription>
-      <PickSize />
-      <StyledPrice>Price: ${item.price}</StyledPrice>
-      <Button handleClick={() => handleAddToCart(item)}>Add to cart</Button>
-    </ItemDescWrapper>
-  </StyledWrapper>
-);
+const ItemDisplay = ({ item, handleAddToCart }) => {
+  const [size, setSize] = useState("");
+
+  const handleSizeChange = (event) => {
+    setSize(event.target.id);
+  };
+
+  return (
+    <StyledWrapper>
+      <StyledImg src={`../assets/clothes/${item.photo}.png`} alt={item.title} />
+      <ItemDescWrapper>
+        <StyledTitle>{item.title}</StyledTitle>
+        <StyledDescription>{item.desc}</StyledDescription>
+        <PickSize handleSizeChange={handleSizeChange} selectedSize={size} />
+        <StyledPrice>Price: ${item.price}</StyledPrice>
+        <Button
+          handleClick={() =>
+            size
+              ? handleAddToCart(item, size)
+              : alert("Choose a size in order to add this item.")
+          }
+        >
+          Add to cart
+        </Button>
+      </ItemDescWrapper>
+    </StyledWrapper>
+  );
+};
 
 export default ItemDisplay;

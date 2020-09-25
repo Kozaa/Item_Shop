@@ -51,12 +51,14 @@ const CartItemDisplay = ({
   id,
   handleRemoveFromCart,
   index,
+  size,
 }) => (
   <StyledWrapper>
     <StyledImg src={`../assets/clothes/${photo}.png`} />
-    {console.log(index)}
     <StyledTextWpapper>
-      <StyledLink to={`/item/${id}`}>{title}</StyledLink>
+      <StyledLink to={`/item/${id}`}>
+        {title} ({size})
+      </StyledLink>
       <TrashCan
         src="https://www.flaticon.com/svg/static/icons/svg/1214/1214428.svg"
         onClick={() => handleRemoveFromCart(index)}

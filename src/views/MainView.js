@@ -110,6 +110,7 @@ const MainView = ({
           handleNavItemClick={handleNavItemClick}
           cart={cart}
           toggleCartIsVisible={toggleCartIsVisible}
+          resetParameters={resetParameters}
         />
         <SliderDisplay onSaleItems={onSaleItems} isMen={genderChoise} />
         <MainClothesDisplay

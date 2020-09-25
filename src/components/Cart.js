@@ -39,13 +39,19 @@ const StyledCart = styled.button`
     animation: ${addAnimation} 0.5s ease-in-out;
   }
 
-  :active {
-    border: none;
+  :hover {
+    cursor: pointer;
+  }
+
+  :hover:after {
+    transform: scale(1.1);
   }
 `;
 
 const Cart = ({ toggleCartIsVisible, cart }) => {
-  return <StyledCart onClick={toggleCartIsVisible} cart={cart} />;
+  return (
+    <StyledCart onClick={toggleCartIsVisible} cart={cart} key={cart.length} />
+  );
 };
 
 export default Cart;

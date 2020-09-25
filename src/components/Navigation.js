@@ -55,7 +55,9 @@ const Navigation = ({
   toggleCartIsVisible,
 }) => (
   <StyledNavigation>
-    <Title location="mainView">ItemShop</Title>
+    <StyledLink to="/" onClick={resetParameters}>
+      <Title location="mainView">ItemShop</Title>
+    </StyledLink>
     <NavItemsWrapper>
       <StyledLink
         onClick={() => handleNavItemClick("tshirts")}
