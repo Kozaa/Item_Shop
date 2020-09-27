@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import CartItemDisplay from "./CartItemDisplay";
 import Button from "./Button";
+import getTotalCost from "../utils/getTotalCost";
 
 const StyledCartModule = styled.div`
   width: 400px;
@@ -15,7 +17,8 @@ const StyledCartModule = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${({ theme }) => theme.primaryThemeColor};
+  background-color: ${({ theme }) =>
+    theme.primaryThemeColor ? theme.primaryThemeColor : "#434343"};
   padding-bottom: 10px;
 
   transform: ${({ cartIsVisible }) =>
@@ -25,7 +28,8 @@ const StyledCartModule = styled.div`
 
 const StyledH1 = styled.h1`
   font-size: 1.5em;
-  color: ${({ theme }) => theme.primaryTextColor};
+  color: ${({ theme }) =>
+    theme.primaryTextColor ? theme.primaryTextColor : "white"};
   font-family: "Jura", sans-serif;
 `;
 
@@ -42,29 +46,32 @@ const CloseButton = styled(Button)`
   top: 10px;
 `;
 
+const StyledLink = styled(Link)`
+  min-height: 0.7em;
+
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: ${({ theme }) => theme.secondaryTextColor} !important ;
+  background-color: ${({ theme }) => theme.secondaryThemeColor};
+
+  padding: 10px 20px;
+
+  :hover {
+    cursor: pointer;
+  }
+
+  :visited {
+    color: inherit;
+  }
+`;
+
 const CartModule = ({
   cart,
   toggleCartIsVisible,
   cartIsVisible,
   handleRemoveFromCart,
+  checkout,
 }) => {
-  const getTotalCost = () => {
-    if (cart.length > 1) {
-      const price = cart.reduce((acc, item) => {
-        let newAcc = acc + item.price;
-
-        newAcc = newAcc.toFixed(2);
-        newAcc = Number(newAcc);
-
-        return newAcc;
-      }, 0);
-
-      return (Math.round(price * 100) / 100).toFixed(2);
-    } else if (cart.length === 1) {
-      return cart[0].price;
-    } else return 0;
-  };
-
   return (
     <StyledCartModule cartIsVisible={cartIsVisible}>
       <CloseButton handleClick={toggleCartIsVisible}>X</CloseButton>
@@ -83,9 +90,12 @@ const CartModule = ({
           <StyledH1>Empty</StyledH1>
         )}
       </ItemWrapper>
-      {/* {cart.length === 0 ? <StyledH1>Empty</StyledH1> : null} */}
-      <StyledH1>Total: ${getTotalCost()}</StyledH1>
-      <Button>Checkout</Button>
+      <StyledH1>Total: ${getTotalCost(cart)}</StyledH1>
+      {checkout ? null : (
+        <StyledLink to="/checkout" onClick={toggleCartIsVisible}>
+          Checkout
+        </StyledLink>
+      )}
     </StyledCartModule>
   );
 };

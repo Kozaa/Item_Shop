@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Title from "../components/Title";
 import Cart from "../components/Cart";
-import Button from "../components/Button";
+
 const StyledNavigation = styled.header`
   position: fixed;
   z-index: 2;

@@ -3,8 +3,10 @@ import styled from "styled-components";
 
 const StyledButton = styled.button`
   background: none;
-  color: ${({ theme }) => theme.secondaryTextColor};
-  background-color: ${({ theme }) => theme.secondaryThemeColor};
+  color: ${({ theme }) =>
+    theme.secondaryTextColor ? theme.secondaryTextColor : "white"};
+  background-color: ${({ theme }) =>
+    theme.secondaryThemeColor ? theme.secondaryThemeColor : "black"};
   border: none;
 
   min-height: 0.7em;
