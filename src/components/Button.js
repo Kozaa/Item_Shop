@@ -21,8 +21,19 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = ({ children, handleClick, className }) => (
-  <StyledButton className={className} onClick={handleClick}>
+const Button = ({
+  children,
+  handleClick,
+  className,
+  type = "button",
+  disabled = null,
+}) => (
+  <StyledButton
+    type={type}
+    className={className}
+    onClick={handleClick}
+    disabled={disabled}
+  >
     {children}
   </StyledButton>
 );

@@ -48,81 +48,8 @@ const Root = () => {
     Sort: "",
   });
 
-  const [cart, setCart] = useState([
-    {
-      id: "mt1",
-      title: "blue nike t-shirt (mt1)",
-      desc:
-        "The best-fitting and flattering T-shirt. This basic tee especially has just the right weight to make it feel like a real shirt and not something sloppy. This one is not a workout tee per say, but you can't go wrong with one of those options, either.",
-      price: 167.68,
-      brand: "nike",
-      color: "blue",
-      photo: "manshirt1",
-      onSale: false,
-      size: "M",
-    },
-    {
-      id: "mt2",
-      title: "blue nike t-shirt (mt2)",
-      desc:
-        "The best-fitting and flattering T-shirt. This basic tee especially has just the right weight to make it feel like a real shirt and not something sloppy. This one is not a workout tee per say, but you can't go wrong with one of those options, either.",
-      price: 190.44,
-      brand: "nike",
-      color: "blue",
-      photo: "manshirt2",
-      onSale: false,
-      size: "M",
-    },
-    {
-      id: "wt3",
-      title: "blue nike t-shirt (wt3)",
-      desc:
-        "The best-fitting and flattering T-shirt. This basic tee especially has just the right weight to make it feel like a real shirt and not something sloppy. This one is not a workout tee per say, but you can't go wrong with one of those options, either.",
-      price: 183.06,
-      brand: "nike",
-      color: "blue",
-      photo: "manshirt3",
-      onSale: false,
-      size: "M",
-    },
-    {
-      id: "wt4",
-      title: "red nike t-shirt (wt4)",
-      desc:
-        "The best-fitting and flattering T-shirt. This basic tee especially has just the right weight to make it feel like a real shirt and not something sloppy. This one is not a workout tee per say, but you can't go wrong with one of those options, either.",
-      price: 166.08,
-      brand: "nike",
-      color: "red",
-      photo: "manshirt4",
-      onSale: false,
-      size: "M",
-    },
-    {
-      id: "mt5",
-      title: "red nike t-shirt (mt5)",
-      desc:
-        "The best-fitting and flattering T-shirt. This basic tee especially has just the right weight to make it feel like a real shirt and not something sloppy. This one is not a workout tee per say, but you can't go wrong with one of those options, either.",
-      price: 133.52,
-      brand: "nike",
-      color: "red",
-      photo: "manshirt5",
-      onSale: false,
-      size: "M",
-    },
-    {
-      id: "mt6",
-      title: "yellow nike t-shirt (mt6)",
-      desc:
-        "The best-fitting and flattering T-shirt. This basic tee especially has just the right weight to make it feel like a real shirt and not something sloppy. This one is not a workout tee per say, but you can't go wrong with one of those options, either.",
-      price: 61.45,
-      brand: "nike",
-      color: "yellow",
-      photo: "manshirt6",
-      onSale: false,
-      size: "M",
-    },
-  ]);
-  const [cartIsVisible, setCartIsVisible] = useState(true);
+  const [cart, setCart] = useState([]);
+  const [cartIsVisible, setCartIsVisible] = useState(false);
 
   const handleAddToCart = (item, size) => {
     const cartItem = Object.assign({}, item); //brake of object reference

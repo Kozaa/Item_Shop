@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import CartItemDisplay from "../components/CartItemDisplay";
 import Navigation from "../components/Navigation";
 import CartModule from "../components/CartModule";
 import getTotalCost from "../utils/getTotalCost";
+import CheckoutForm from "../components/CheckoutForm";
+import FinishedOrderDisplay from "../components/FinishedOrderDisplay";
 
 const Wrapper = styled.div`
   margin-top: 10vh;
@@ -42,6 +44,12 @@ const ChceckoutView = ({
   cartIsVisible,
   handleRemoveFromCart,
 }) => {
+  const [finished, setFinished] = useState(false);
+
+  const toggleFinished = () => {
+    setFinished(!finished);
+  };
+
   return (
     <>
       <Navigation
@@ -62,6 +70,7 @@ const ChceckoutView = ({
           {cart.map((item, i) => (
             <CartItemDisplay
               {...item}
+              key={i}
               index={i}
               checkout={true}
               handleRemoveFromCart={handleRemoveFromCart}
@@ -73,6 +82,11 @@ const ChceckoutView = ({
             </span>
             <span>${getTotalCost(cart)}</span>
           </SummaryWrapper>
+          {finished ? (
+            <FinishedOrderDisplay />
+          ) : (
+            <CheckoutForm cart={cart} toggleFinished={toggleFinished} />
+          )}
         </ItemsWrapper>
       </Wrapper>
     </>
