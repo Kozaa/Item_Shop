@@ -4,6 +4,7 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import StyledInput from "./StyledInput";
 import Button from "./Button";
+import firebase from "../firebase";
 
 const Wrapper = styled.div`
   display: grid;
@@ -27,6 +28,7 @@ const PositionedButton = styled(Button)`
 
 const ErrorMsg = styled.div`
   color: red;
+  font-size: 0.7em;
 `;
 
 const validationSchema = yup.object({
@@ -39,7 +41,7 @@ const validationSchema = yup.object({
   deliveryType: yup.string().required(),
 });
 
-const CheckoutForm = ({ cart, toggleFinished }) => {
+const CheckoutForm = ({ cart, toggleFinished, orderID }) => {
   return (
     <div>
       <Formik
@@ -55,7 +57,12 @@ const CheckoutForm = ({ cart, toggleFinished }) => {
         }}
         validationSchema={validationSchema}
         onSubmit={(data) => {
-          console.log(data);
+          console.log("data: ", data, "cart: ", cart);
+          firebase.firestore().collection("orders").add({
+            orderID,
+            userData: data,
+            orderedItems: cart,
+          });
           toggleFinished();
         }}
       >

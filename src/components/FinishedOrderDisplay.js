@@ -10,10 +10,10 @@ const Wrapper = styled.div`
   text-align: center;
 `;
 
-const FinishedOrderDisplay = () => (
+const FinishedOrderDisplay = ({ orderID }) => (
   <Wrapper>
     <h1>Thanks for making an order!</h1>
-    <h3>Your order number is 123434213.</h3>
+    <h3>Your order number is {orderID}.</h3>
     <h4>You can check all orders at url/orders</h4>
     <h5>
       Remember, this is just a practice website and no actual orders were made.

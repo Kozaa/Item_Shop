@@ -6,6 +6,7 @@ import CartModule from "../components/CartModule";
 import getTotalCost from "../utils/getTotalCost";
 import CheckoutForm from "../components/CheckoutForm";
 import FinishedOrderDisplay from "../components/FinishedOrderDisplay";
+import Footer from "../components/Footer";
 
 const Wrapper = styled.div`
   margin-top: 10vh;
@@ -45,6 +46,7 @@ const ChceckoutView = ({
   handleRemoveFromCart,
 }) => {
   const [finished, setFinished] = useState(false);
+  const [orderID] = useState(Math.floor(Math.random() * 100000));
 
   const toggleFinished = () => {
     setFinished(!finished);
@@ -83,11 +85,16 @@ const ChceckoutView = ({
             <span>${getTotalCost(cart)}</span>
           </SummaryWrapper>
           {finished ? (
-            <FinishedOrderDisplay />
+            <FinishedOrderDisplay orderID={orderID} />
           ) : (
-            <CheckoutForm cart={cart} toggleFinished={toggleFinished} />
+            <CheckoutForm
+              cart={cart}
+              toggleFinished={toggleFinished}
+              orderID={orderID}
+            />
           )}
         </ItemsWrapper>
+        <Footer />
       </Wrapper>
     </>
   );

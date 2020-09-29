@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import HeroView from "./HeroView";
 import MainView from "./MainView";
 import ItemView from "./ItemView";
 import ChceckoutView from "./CheckoutView";
+import OrdersView from "./OrdersView";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -48,8 +49,14 @@ const Root = () => {
     Sort: "",
   });
 
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(
+    localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : []
+  );
   const [cartIsVisible, setCartIsVisible] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  });
 
   const handleAddToCart = (item, size) => {
     const cartItem = Object.assign({}, item); //brake of object reference
@@ -154,6 +161,7 @@ const Root = () => {
               />
             )}
           />
+          <Route path="/orders" component={OrdersView} />
         </Switch>
       </BrowserRouter>
     </>

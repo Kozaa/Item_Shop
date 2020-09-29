@@ -37,6 +37,7 @@ const StyledRadio = styled.input`
 
 const ErrorMsg = styled.div`
   color: red;
+  font-size: 0.7em;
 `;
 
 const StyledInput = ({ name, type = "input", value, errors, touched }) => {
@@ -73,6 +74,8 @@ const StyledInput = ({ name, type = "input", value, errors, touched }) => {
           <Field as={CustomTextarea} name={name} type="input" />
         </Wrapper>
       );
+    default:
+      return <div>Sorry something went wrong.</div>;
   }
 };
 

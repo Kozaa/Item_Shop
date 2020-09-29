@@ -42,11 +42,4 @@ const ItemTile = ({ photo, price, title, id }) => (
   </StyledItemTile>
 );
 
-ItemTile.defaultProps = {
-  photo: "manpants4",
-  id: "mp4",
-  price: 23.34,
-  title: "men pants number 4 (deafult prop)",
-};
-
 export default ItemTile;

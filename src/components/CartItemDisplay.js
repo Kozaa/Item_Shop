@@ -7,7 +7,6 @@ const StyledWrapper = styled.div`
   height: ${({ checkout }) => (checkout ? "130px" : "auto")};
   margin-bottom: 8px;
   display: flex;
-  justify-content: ;
   text-align: left;
   text-decoration: none;
   color: black;
