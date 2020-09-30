@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Title from "../components/Title";
 import Cart from "../components/Cart";
+import MobileNavigation from "../components/MobileNavigation";
 
 const StyledNavigation = styled.header`
   position: fixed;
-  z-index: 2;
+  z-index: 5;
 
   display: flex;
   align-items: center;
@@ -46,6 +47,27 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const HamburgerMenu = styled.div`
+  width: 2em;
+  height: 1.2em;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  position: relative;
+
+  :after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 3px;
+    background-color: black;
+  }
+`;
+
+const deviceWidth = window.innerWidth;
+
 const Navigation = ({
   isMen,
   toggleGender,
@@ -53,43 +75,70 @@ const Navigation = ({
   resetParameters,
   cart,
   toggleCartIsVisible,
-}) => (
-  <StyledNavigation>
-    <StyledLink to="/" onClick={resetParameters}>
-      <Title location="mainView">ItemShop</Title>
-    </StyledLink>
-    <NavItemsWrapper>
-      <StyledLink
-        onClick={() => handleNavItemClick("tshirts")}
-        to={isMen ? "/men" : "/women"}
-      >
-        t-shirts
-      </StyledLink>
-      <StyledLink
-        onClick={() => handleNavItemClick("pants")}
-        to={isMen ? "/men" : "/women"}
-      >
-        pants
-      </StyledLink>
-      <StyledLink
-        onClick={() => handleNavItemClick("shoes")}
-        to={isMen ? "/men" : "/women"}
-      >
-        shoes
-      </StyledLink>
-    </NavItemsWrapper>
-    <StyledGenderLink
-      to={isMen ? "/women" : "/men"}
-      onClick={() => {
-        toggleGender();
-        resetParameters();
-      }}
-    >
-      {isMen ? "Women" : "Men"}
-    </StyledGenderLink>
-    <Cart toggleCartIsVisible={toggleCartIsVisible} cart={cart} />
-  </StyledNavigation>
-);
+}) => {
+  const [navIsVisible, setNavIsVisible] = useState(false);
+
+  const toggleNavIsVisible = () => {
+    setNavIsVisible(!navIsVisible);
+  };
+
+  return (
+    <>
+      {window.innerWidth < 768 ? (
+        <MobileNavigation
+          navIsVisible={navIsVisible}
+          handleNavItemClick={handleNavItemClick}
+          isMen={isMen}
+          toggleGender={toggleGender}
+          resetParameters={resetParameters}
+          toggleNavIsVisible={toggleNavIsVisible}
+        />
+      ) : null}
+      <StyledNavigation>
+        <StyledLink to="/" onClick={resetParameters}>
+          <Title location="mainView">ItemShop</Title>
+        </StyledLink>
+        {deviceWidth > 768 ? (
+          <>
+            <NavItemsWrapper>
+              <StyledLink
+                onClick={() => handleNavItemClick("tshirts")}
+                to={isMen ? "/men" : "/women"}
+              >
+                t-shirts
+              </StyledLink>
+              <StyledLink
+                onClick={() => handleNavItemClick("pants")}
+                to={isMen ? "/men" : "/women"}
+              >
+                pants
+              </StyledLink>
+              <StyledLink
+                onClick={() => handleNavItemClick("shoes")}
+                to={isMen ? "/men" : "/women"}
+              >
+                shoes
+              </StyledLink>
+            </NavItemsWrapper>
+            <StyledGenderLink
+              to={isMen ? "/women" : "/men"}
+              onClick={() => {
+                toggleGender();
+                resetParameters();
+              }}
+            >
+              {isMen ? "Women" : "Men"}
+            </StyledGenderLink>
+          </>
+        ) : (
+          <HamburgerMenu onClick={toggleNavIsVisible} />
+        )}
+
+        <Cart toggleCartIsVisible={toggleCartIsVisible} cart={cart} />
+      </StyledNavigation>
+    </>
+  );
+};
 
 Navigation.defaultProps = {
   toggleGender: function () {

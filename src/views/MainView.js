@@ -97,13 +97,14 @@ const MainView = ({
 
   return (
     <ThemeProvider theme={genderChoise ? menTheme : womenTheme}>
+      <CartModule
+        cart={cart}
+        toggleCartIsVisible={toggleCartIsVisible}
+        cartIsVisible={cartIsVisible}
+        handleRemoveFromCart={handleRemoveFromCart}
+      />
+
       <MainViewWrapper>
-        <CartModule
-          cart={cart}
-          toggleCartIsVisible={toggleCartIsVisible}
-          cartIsVisible={cartIsVisible}
-          handleRemoveFromCart={handleRemoveFromCart}
-        />
         <Navigation
           isMen={genderChoise}
           toggleGender={handleGenderChange}

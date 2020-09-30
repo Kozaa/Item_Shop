@@ -5,6 +5,7 @@ const StyledDiv = styled.div`
   width: 100%;
   padding: 20px;
   background-color: ${({ theme }) => theme.primaryThemeColor};
+  text-align: justify;
 `;
 
 const H2 = styled.h2`

@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 `;
 
 const ItemsWrapper = styled.div`
-  width: 50%;
+  width: 90%;
   display: flex;
   flex-direction: column;
 `;

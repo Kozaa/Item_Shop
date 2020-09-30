@@ -13,6 +13,11 @@ const Wrapper = styled.div`
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 50px;
   margin-top: 20px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
 `;
 
 const RadioWrapper = styled.div`

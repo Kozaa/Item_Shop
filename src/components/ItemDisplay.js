@@ -19,6 +19,7 @@ const StyledWrapper = styled.div`
 
 const StyledImg = styled.img`
   width: 50vh;
+  max-width: 100%;
 `;
 
 const ItemDescWrapper = styled.div`

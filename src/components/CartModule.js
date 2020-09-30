@@ -23,7 +23,11 @@ const StyledCartModule = styled.div`
 
   transform: ${({ cartIsVisible }) =>
     cartIsVisible ? "translateX(0)" : "translateX(100%)"};
-  transition: transform 1s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const StyledH1 = styled.h1`
