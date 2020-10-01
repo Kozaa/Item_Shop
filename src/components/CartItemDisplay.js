@@ -23,7 +23,7 @@ const StyledTextWpapper = styled.div`
   grid-template-rows: 2fr 1fr;
   width: auto;
   background-color: ${({ checkout, id }) =>
-    checkout ? (id[0] === "m" ? "#F1FAEE" : "#FFEEE5") : "white"}; ;
+    checkout ? (id[0] === "m" ? "#F1FAEE" : "#FFEEE5") : "white"};
 `;
 
 const StyledImg = styled.img`
@@ -35,8 +35,12 @@ const TrashCan = styled.img`
   grid-row: 1/3;
   grid-column: 2/3;
   justify-self: center;
-  width: ${({ checkout }) => (checkout ? "50%" : "100%")};
+  width: ${({ checkout }) => (checkout ? "40%" : "100%")};
   height: auto;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Price = styled.div`

@@ -67,9 +67,8 @@ const ItemDetails = styled.div`
   color: white;
 `;
 
-const Detail = styled.div``;
-
 const Price = styled.div`
+  color: black;
   background-color: ${({ theme }) => theme.secondaryThemeColor};
   height: 100%;
   padding: 8px;
@@ -91,7 +90,7 @@ const ItemTile = ({
     to={offset === 0 ? `/item/${id}` : isMen ? "/men" : "/women"}
   >
     <ItemDetails>
-      <Detail>{title}</Detail>
+      <div>{title}</div>
       <Price>${price}</Price>
     </ItemDetails>
   </StyledTileLink>

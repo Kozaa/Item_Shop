@@ -1,17 +1,17 @@
 export const womenTheme = {
   primaryTextColor: "#FFF",
   secondaryTextColor: "#000",
-  backgroundColor: "#FFEEE5",
-  primaryThemeColor: "#6D6875",
-  secondaryThemeColor: "#E5989B",
+  backgroundColor: "#FFFCFB",
+  primaryThemeColor: "#E0CDFF",
+  secondaryThemeColor: "#FAC0DC",
   genderButton: "#524FEA",
 };
 
 export const menTheme = {
   primaryTextColor: "#000",
-  secondaryTextColor: "#FFF",
-  backgroundColor: "#F1FAEE",
-  primaryThemeColor: "#A8DADC",
-  secondaryThemeColor: "#457B9D",
+  secondaryTextColor: "#000",
+  backgroundColor: "#F3F3F3",
+  primaryThemeColor: "#F6FFFF",
+  secondaryThemeColor: "#C9EAFF",
   genderButton: "#FF00B8",
 };

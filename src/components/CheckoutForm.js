@@ -62,7 +62,6 @@ const CheckoutForm = ({ cart, toggleFinished, orderID }) => {
         }}
         validationSchema={validationSchema}
         onSubmit={(data) => {
-          console.log("data: ", data, "cart: ", cart);
           firebase.firestore().collection("orders").add({
             orderID,
             userData: data,

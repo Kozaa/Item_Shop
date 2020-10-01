@@ -22,7 +22,6 @@ const OrdersView = () => {
         const dataBaseOrders = snapshot.docs.map((doc) => doc.data());
 
         setOrders(dataBaseOrders);
-        console.group(dataBaseOrders);
       });
   }, []);
 

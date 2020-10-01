@@ -35,7 +35,6 @@ body {
 
     #root {
       flex-direction: column;
-  
     }
   }
 

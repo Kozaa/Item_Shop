@@ -42,6 +42,7 @@ const StyledGenderLink = styled(Link)`
   text-align: center;
   color: white;
   background-color: ${({ theme }) => theme.genderButton};
+
   :hover {
     background-color: #ddd;
   }

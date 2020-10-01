@@ -20,29 +20,65 @@ const StyledItemsWrapper = styled.div`
 const PrevButton = styled(Button)`
   position: absolute;
   left: 10%;
-  bottom: 10%;
-  border-radius: 50%;
-  height: 20vh;
-  width: 20vh;
+  bottom: 50%;
+  transform: translateY(50%);
+  border-radius: 10%;
+  height: 15vh;
+  width: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1em;
   outline: none;
+  background-color: ${({ theme }) => theme.secondaryThemeColor};
   transition: transform 0.1s ease-in-out;
 
   :active {
-    transform: scale(1.05);
+    transform: translateX(-20%) translateY(50%);
   }
 
   @media screen and (max-width: 768px) {
     width: 10vh;
     height: 10vh;
-    bottom: auto;
-    top: 20vh;
+    left: 5%;
   }
 `;
 
 const NextButton = styled(PrevButton)`
   left: auto;
   right: 10%;
+
+  @media screen and (max-width: 768px) {
+    width: 10vh;
+    height: 10vh;
+    right: 5%;
+  }
+
+  :active {
+    transform: translateX(20%) translateY(50%);
+  }
+`;
+
+const ArrowRight = styled.div`
+  width: 0;
+  height: 0;
+  border-top: 1.6em solid transparent;
+  border-bottom: 1.6em solid transparent;
+
+  border-left: 1.6em solid black;
+
+  @media screen and (max-width: 768px) {
+    border-width: 1.2em;
+  }
+`;
+
+const ArrowLeft = styled(ArrowRight)`
+  border-left: none;
+  border-right: 1.6em solid black;
+
+  @media screen and (max-width: 768px) {
+    border-width: 1.2em;
+  }
 `;
 
 const SeeMoreButton = styled(Button)`
@@ -78,7 +114,7 @@ const sliderReducer = (state, action) => {
 
 const SliderDisplay = ({ onSaleItems, isMen }) => {
   const initialState = {
-    slideIndex: Math.floor(onSaleItems.length / 2), // <-- its always 0 because usestate is set to [], need fix
+    slideIndex: Math.floor(onSaleItems.length / 2),
   };
 
   const [slide, dispatch] = useReducer(sliderReducer, initialState);
@@ -113,14 +149,14 @@ const SliderDisplay = ({ onSaleItems, isMen }) => {
           dispatch({ type: "PREV", arrLength: onSaleItems.length })
         }
       >
-        prev
+        <ArrowLeft />
       </PrevButton>
       <NextButton
         handleClick={() =>
           dispatch({ type: "NEXT", arrLength: onSaleItems.length })
         }
       >
-        next
+        <ArrowRight />
       </NextButton>
       <SeeMoreButton
         handleClick={() =>
