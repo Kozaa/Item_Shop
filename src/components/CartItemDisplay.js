@@ -29,6 +29,7 @@ const StyledTextWpapper = styled.div`
 const StyledImg = styled.img`
   width: ${({ checkout }) => (checkout ? "90px" : "25%")};
   margin-right: 8px;
+  flex-shrink: 0;
 `;
 
 const TrashCan = styled.img`
