@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
+import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import { manClothes, womanClothes } from "../data";
 import { menTheme, womenTheme } from "../theme";
@@ -8,9 +9,11 @@ import Disclaimer from "../components/Disclaimer";
 import SimilarItems from "../components/SimilarItems";
 import Footer from "../components/Footer";
 import CartModule from "../components/CartModule";
+import Button from "../components/Button";
 
 const StyledWrapper = styled.div`
   width: 100%;
+  min-height: 90vh;
   margin-top: 10vh;
   display: flex;
   flex-direction: column;
@@ -18,6 +21,12 @@ const StyledWrapper = styled.div`
   justify-content: space-between;
   gap: 50px;
   background-color: ${({ theme }) => theme.backgroundColor};
+`;
+
+const StyledNotFound = styled.div`
+  height: 100%;
+  padding: 50px;
+  text-align: center;
 `;
 
 const clothes = [
@@ -31,6 +40,7 @@ const clothes = [
 
 const ItemView = ({
   match,
+  history,
   handleNavItemClick,
   resetParameters,
   handleAddToCart,
@@ -43,14 +53,17 @@ const ItemView = ({
 
   const itemId = match.params.id;
   const isMen = itemId[0] === "m" ? true : false;
+  const [mainItem, setMainItem] = useState(
+    clothes.find((item) => item.id === itemId)
+  );
 
-  const findItem = () => {
-    return clothes.find((item) => item.id === itemId);
-  };
+  useEffect(() => {
+    const foundItem = clothes.find((item) => item.id === itemId);
+
+    setMainItem(foundItem);
+  }, [itemId]);
 
   const getSimilarItems = () => {
-    const mainItem = findItem();
-
     const filteredByType = clothes.filter(
       (item) =>
         item.id.slice(0, 2) === mainItem.id.slice(0, 2) &&
@@ -89,10 +102,24 @@ const ItemView = ({
         handleRemoveFromCart={handleRemoveFromCart}
       />
       <StyledWrapper>
-        <ItemDisplay item={findItem()} handleAddToCart={handleAddToCart} />
-        <Disclaimer />
-        <SimilarItems similarItems={getSimilarItems()} />
-        <Footer />
+        {mainItem ? (
+          <>
+            <ItemDisplay item={mainItem} handleAddToCart={handleAddToCart} />
+            <Disclaimer />
+            <SimilarItems similarItems={getSimilarItems()} />
+            <Footer />
+          </>
+        ) : (
+          <>
+            <StyledNotFound>
+              <h2>Sorry we couldn't find item with the id of ({itemId}).</h2>
+              <Link to="/">
+                <Button>Main Page</Button>
+              </Link>
+            </StyledNotFound>
+            <Footer />
+          </>
+        )}
       </StyledWrapper>
     </ThemeProvider>
   );
