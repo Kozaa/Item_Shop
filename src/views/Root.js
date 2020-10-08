@@ -6,6 +6,7 @@ import MainView from "./MainView";
 import ItemView from "./ItemView";
 import ChceckoutView from "./CheckoutView";
 import OrdersView from "./OrdersView";
+import NotFoundView from "./NotFoundView";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -161,6 +162,7 @@ const Root = () => {
             )}
           />
           <Route path="/orders" component={OrdersView} />
+          <Route component={NotFoundView} />
         </Switch>
       </BrowserRouter>
     </>
