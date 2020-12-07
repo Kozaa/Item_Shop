@@ -43,18 +43,18 @@ const MainView = ({
     const unsorted = genderChoise ? manClothes : womanClothes;
 
     const sortedByType =
-      !sortParameters.Item || sortParameters.Item === "All"
+      !sortParameters.Item || sortParameters.Item === "all"
         ? [...unsorted.tshirts, ...unsorted.pants, ...unsorted.shoes]
         : unsorted[sortParameters.Item.toLowerCase()];
 
     const sortedByBrand = sortedByType.filter((item) => {
-      return !sortParameters.Brand || sortParameters.Brand === "All"
+      return !sortParameters.Brand || sortParameters.Brand === "all"
         ? true
         : item.brand === sortParameters.Brand.toLowerCase();
     });
 
     const sortedByColor = sortedByBrand.filter((item) => {
-      return !sortParameters.Color || sortParameters.Color === "All"
+      return !sortParameters.Color || sortParameters.Color === "all"
         ? true
         : item.color === sortParameters.Color.toLowerCase();
     });
